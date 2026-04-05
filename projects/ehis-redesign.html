@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-bs-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eHIS 醫療系統看診介面優化 — Anita Portfolio</title>
+  <meta name="description" content="以產品思維重構醫師看診工作介面，實現零捲動工作流，降低醫療場景下的認知負擔">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700;900&family=Outfit:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/custom.css">
+
+  <style>
+    /* ── Before / After Comparison ── */
+    .ba-section {
+      margin: 2.5rem 0;
+    }
+
+    .ba-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.875rem;
+      border-radius: var(--radius-pill);
+      margin-bottom: 1rem;
+    }
+
+    .ba-label--before {
+      background: rgba(239, 68, 68, 0.12);
+      color: #f87171;
+      border: 1px solid rgba(239, 68, 68, 0.25);
+    }
+
+    .ba-label--after {
+      background: rgba(34, 197, 94, 0.12);
+      color: #4ade80;
+      border: 1px solid rgba(34, 197, 94, 0.25);
+    }
+
+    .ba-desc {
+      font-size: var(--fs-small);
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .ba-img-wrap {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-elevated);
+    }
+
+    .ba-img-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ── Problem / Solution callout cards ── */
+    .insight-card {
+      background: rgba(255, 255, 255, 0.025);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.25rem 1.5rem;
+      height: 100%;
+    }
+
+    .insight-card--problem {
+      border-left: 3px solid #f87171;
+    }
+
+    .insight-card--solution {
+      border-left: 3px solid #4ade80;
+    }
+
+    .insight-card--strategy {
+      border-left: 3px solid var(--accent);
+    }
+
+    .insight-num {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .insight-card--problem .insight-num {
+      color: #f87171;
+    }
+
+    .insight-card--solution .insight-num {
+      color: #4ade80;
+    }
+
+    .insight-card--strategy .insight-num {
+      color: var(--accent);
+    }
+
+    .insight-card h4 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .insight-card p {
+      font-size: var(--fs-small);
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* ── Impact metrics ── */
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .impact-item {
+      background: rgba(255, 255, 255, 0.025);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      text-align: center;
+    }
+
+    .impact-value {
+      font-family: var(--font-display);
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    .impact-label {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-top: 0.375rem;
+      line-height: 1.5;
+    }
+
+    /* ── PM Insight callout ── */
+    .pm-callout {
+      background: var(--accent-subtle);
+      border: 1px solid rgba(180, 160, 212, 0.2);
+      border-radius: var(--radius-md);
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .pm-callout-label {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .pm-callout p {
+      font-size: var(--fs-small);
+      color: var(--text-secondary);
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    @media (max-width: 575.98px) {
+      .impact-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-portfolio" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">Anita</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent"
+        aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navContent">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="../index.html#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Project Hero -->
+  <section class="project-hero-section">
+    <div class="project-hero-glow" style="background:radial-gradient(circle,rgba(99,179,237,0.35) 0%,transparent 70%);">
+    </div>
+    <div class="container position-relative" style="z-index:2;">
+      <a href="../index.html#projects" class="back-link mb-4 d-inline-flex">← 返回專案列表</a>
+      <div class="mb-3">
+        <span class="tag">Web System</span>
+        <span class="tag">醫療資訊</span>
+        <span class="tag">UX Redesign</span>
+      </div>
+      <h1 class="project-detail-title mb-3">eHIS 醫療系統<br>看診介面優化</h1>
+      <p class="project-detail-desc mb-4" style="max-width:720px;">
+        以使用者情境出發，重構醫師看診工作介面——精煉資訊層級、重組功能按鈕、優化版面佈局，讓醫師在高壓看診環境中無需捲動頁面即可掌握所有關鍵資訊，專注於病患本身。
+      </p>
+      <div class="row g-3" style="max-width:680px;">
+        <div class="col-6 col-md-3">
+          <div class="meta-label">角色</div>
+          <div class="meta-value">UI/UX Designer</div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="meta-label">企業</div>
+          <div class="meta-value">資拓宏宇</div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="meta-label">系統類型</div>
+          <div class="meta-value">電子病歷系統</div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="meta-label">使用者</div>
+          <div class="meta-value">醫師 / 護理師</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Content -->
+  <div class="container" style="padding-bottom:3rem;">
+
+    <!-- ── 1. 背景與挑戰 ── -->
+    <div class="project-section">
+      <h2 class="project-section-title">背景與挑戰</h2>
+      <p>eHIS（Electronic Health Information
+        System）是醫院端的電子病歷資訊系統，看診頁面是醫師在診間最頻繁使用的核心工作介面。每位醫師每天可能面對數十位至上百位患者，介面的操作效率直接影響看診品質與醫師的工作壓力。</p>
+
+      <div class="pm-callout">
+        <div class="pm-callout-label">PM Insight — 使用者情境分析</div>
+        <p>醫師在看診時往往需要同時處理多件事：口頭問診、輸入主觀/客觀資料、查詢過去病史、開立處方。這是一個「高認知負荷 × 高時間壓力」的複合場景，任何多餘的資訊或操作步驟都會成為干擾，甚至提高醫療失誤的風險。</p>
+      </div>
+
+      <p>原始介面存在三個核心問題：</p>
+      <div class="row g-3 mt-1">
+        <div class="col-md-4">
+          <div class="insight-card insight-card--problem">
+            <div class="insight-num">Problem 01</div>
+            <h4>資訊過載，無視覺層級</h4>
+            <p>患者基本資料顯示欄位過多，七個功能按鈕文字冗長且重要性未分級，醫師無法一眼辨識關鍵資訊與主要操作。</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="insight-card insight-card--problem">
+            <div class="insight-num">Problem 02</div>
+            <h4>空間利用低效</h4>
+            <p>S/O/A 區塊右下方存在大面積空白，版面未有效運用，使整體頁面高度過長，需要捲動才能檢視完整資訊。</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="insight-card insight-card--problem">
+            <div class="insight-num">Problem 03</div>
+            <h4>表單樣式不一致</h4>
+            <p>處方（Plan）區塊的表格格式破版，欄位寬度不一、按鈕位置混亂，造成視覺凌亂感，降低使用者對系統的信賴感。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Before Image -->
+    <div class="ba-section">
+      <div class="ba-label ba-label--before">✕ &nbsp;Before — 原始介面</div>
+      <p class="ba-desc">資訊過長，需往下滑才能看完全部資訊，對於需同時對照其他資訊時使用上不友善。</p>
+      <div class="ba-img-wrap">
+        <img src="../img/web-SOAP1.jpg" alt="eHIS 看診介面 Before" loading="lazy">
+
+      </div>
+    </div>
+
+    <!-- ── 2. 設計策略 ── -->
+    <div class="project-section">
+      <h2 class="project-section-title">設計策略</h2>
+      <p>以「醫師看診當下真正需要什麼」為出發點，採用資訊精煉、層級重組、版面壓縮三個方向同步進行優化：</p>
+
+      <div class="row g-3 mt-1">
+        <div class="col-md-6">
+          <div class="insight-card insight-card--strategy">
+            <div class="insight-num">Strategy 01</div>
+            <h4>患者資訊精煉</h4>
+            <p>從「全部顯示」改為「看診確認所需」。保留姓名、身分證號、性別、身高、BMI、血壓、體重、體溫、脈搏等核心生理數值，移除在看診當下非必要的完整地址、電話等資訊，減少視覺雜訊。</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="insight-card insight-card--strategy">
+            <div class="insight-num">Strategy 02</div>
+            <h4>按鈕重要性分級</h4>
+            <p>將七個同等視覺權重的按鈕，依使用頻率與重要性重新分級：高頻核心功能（過敏禁忌、重大傷病、雲端藥歷、診斷證明）以 Primary 按鈕呈現，輔助功能降至次要視覺層級，縮短決策時間。</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="insight-card insight-card--strategy">
+            <div class="insight-num">Strategy 03</div>
+            <h4>版面重構，實現零捲動</h4>
+            <p>將 S（Subjective）、O（Objective）縱向排列改為左右並排，A（Assessment）維持右側欄，配合精簡後的患者資訊列，讓整個看診必要資訊在同一視窗可見，無需捲動頁面。</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="insight-card insight-card--strategy">
+            <div class="insight-num">Strategy 04</div>
+            <h4>表單一致性修正</h4>
+            <p>統一 Plan 處方區塊的欄位寬度比例、按鈕尺寸與位置規則，將刪除按鈕移至列首（減少誤觸），新增慢性處方箋快捷按鈕，強化操作可預期性與整體專業感。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-callout mt-4">
+        <div class="pm-callout-label">PM Insight — 設計決策取捨</div>
+        <p>
+          此次優化最關鍵的取捨在於「患者資訊的顯示範圍」。完整資訊的揭露對某些工作流程有其必要性，因此保留「基本資料編輯」入口，讓需要查看完整資料的醫師仍可快速切換，而非完全隱藏——這是在「單一視窗高效率」與「完整資訊可及性」之間的平衡點。
+        </p>
+      </div>
+    </div>
+
+    <!-- After Image -->
+    <div class="ba-section">
+      <div class="ba-label ba-label--after">✓ &nbsp;After — 優化後介面</div>
+      <p class="ba-desc">僅保留醫生看診所需資訊，讓視窗維持不需捲動即可觀看到所有資訊。</p>
+      <div class="ba-img-wrap">
+        <img src="../img/web-SOAP2.jpg" alt="eHIS 看診介面 After" loading="lazy">
+      </div>
+    </div>
+
+    <!-- Before vs After detail -->
+    <div class="project-section">
+      <h2 class="project-section-title">調整前 vs 調整後</h2>
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="insight-card">
+            <div class="insight-num" style="color:var(--accent);">區塊 ① 患者基本資料</div>
+            <h4>資訊密度與按鈕層級</h4>
+            <p><span style="color:#f87171;">Before：</span>全欄位顯示 + 七個同等權重按鈕，視覺雜亂無法快速定位。</p>
+            <p class="mt-2"><span style="color:#4ade80;">After：</span>精煉為看診必要欄位，按鈕依重要性分為主要 / 次要，一眼判斷。</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="insight-card">
+            <div class="insight-num" style="color:var(--accent);">區塊 ② S/O/A 病歷輸入</div>
+            <h4>版面效率與空間利用</h4>
+            <p><span style="color:#f87171;">Before：</span>S、O 縱向堆疊，右下方空白區域過大，整體需捲動查看。</p>
+            <p class="mt-2"><span style="color:#4ade80;">After：</span>左右並排緊縮佈局，消除空白，所有輸入區域一覽無遺。</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="insight-card">
+            <div class="insight-num" style="color:var(--accent);">區塊 ③ Plan 處方區塊</div>
+            <h4>表格一致性與操作邏輯</h4>
+            <p><span style="color:#f87171;">Before：</span>欄位比例不一、樣式破版，刪除按鈕位置混亂，專業感不足。</p>
+            <p class="mt-2"><span style="color:#4ade80;">After：</span>統一欄寬、按鈕位置規則化，新增慢性處方箋快捷功能。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 3. 設計價值 ── -->
+    <div class="project-section">
+      <h2 class="project-section-title">設計價值</h2>
+
+      <div class="impact-grid">
+        <div class="impact-item">
+          <div class="impact-value">零捲動</div>
+          <div class="impact-label">看診關鍵資訊<br>單一視窗全覽</div>
+        </div>
+        <div class="impact-item">
+          <div class="impact-value">↓ 認知負荷</div>
+          <div class="impact-label">資訊欄位精煉<br>減少視覺雜訊</div>
+        </div>
+        <div class="impact-item">
+          <div class="impact-value">4 → 1</div>
+          <div class="impact-label">按鈕分級設計<br>主要功能一眼辨識</div>
+        </div>
+      </div>
+
+      <p>這個案例的核心價值不在於視覺美化，而是通過以使用者情境為基礎的設計決策，解決真實工作流中的效率瓶頸：</p>
+
+      <div class="row g-3 mt-2">
+        <div class="col-md-6">
+          <div class="insight-card insight-card--solution">
+            <div class="insight-num">Value 01</div>
+            <h4>降低認知負擔，專注核心任務</h4>
+            <p>醫師在看診時最寶貴的資源是注意力。透過資訊精煉與視覺層級重組，讓醫師不需要「過濾」資訊，能將更多心智資源留給病患溝通與臨床判斷。</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="insight-card insight-card--solution">
+            <div class="insight-num">Value 02</div>
+            <h4>零捲動工作流，提升看診節奏</h4>
+            <p>在需要同時參考其他資訊（如影像報告、過往病歷）的場景下，無需捲動頁面的完整資訊視窗大幅縮短切換成本，提升整體看診流暢度。</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="insight-card insight-card--solution">
+            <div class="insight-num">Value 03</div>
+            <h4>減少誤操作風險</h4>
+            <p>明確的按鈕層級與一致的表單設計，降低醫師在高壓情境下誤觸次要功能的機率。設計的可預期性在醫療系統中直接對應到更低的操作錯誤率。</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="insight-card insight-card--solution">
+            <div class="insight-num">Value 04</div>
+            <h4>提升系統信賴感</h4>
+            <p>整潔、一致的視覺設計讓醫師對系統建立信賴感。在醫療情境中，「看起來專業可靠」不只是美學問題，更是使用者願意依賴系統進行臨床決策的前提。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm-callout mt-4">
+        <div class="pm-callout-label">PM Reflection — 從這個專案學到的</div>
+        <p>
+          醫療資訊系統的設計限制通常比消費性產品嚴格許多——系統需求複雜、利害關係人眾多、改動成本高。這個案例讓我學會在有限的範圍內找到最大的改善槓桿點：不是從零開始重做，而是識別出造成最大痛點的三個關鍵問題，針對性地解決。「有限資源下，找到最高槓桿點」是這次最重要的產品思維練習。
+        </p>
+      </div>
+    </div>
+
+  </div><!-- /container -->
+
+  <!-- Other Projects -->
+  <div class="other-projects">
+    <div class="container">
+      <h3>其他專案</h3>
+      <div class="row g-3">
+        <div class="col-md-4"><a href="nhi-card.html" class="other-project-card d-block">
+            <h4>虛擬健保卡就醫應用 APP</h4>
+            <p>APP — UI/UX — 醫療健康</p>
+          </a></div>
+        <div class="col-md-4"><a href="vaccine.html" class="other-project-card d-block">
+            <h4>新竹市疫苗預約系統</h4>
+            <p>Web — UI/UX + 前端 — 公共服務</p>
+          </a></div>
+        <div class="col-md-4"><a href="health-platform.html" class="other-project-card d-block">
+            <h4>健康促進資訊整合平台</h4>
+            <p>Web — UI/UX — Redesign</p>
+          </a></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer text-center">
+    <div class="container">&copy; 2026 Anita. All rights reserved.</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/main.js"></script>
+  <!-- Back to Top -->
+  <button id="backToTop" class="back-to-top" aria-label="回到最上方">
+    <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+</body>
+
+</html>
