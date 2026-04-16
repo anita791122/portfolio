@@ -215,6 +215,18 @@
     const lightboxImg = document.getElementById('lightboxImg');
 
     if (lightbox && lightboxImg) {
+      // Wrap gallery-img with zoom-hint wrapper on touch devices
+      const isTouch = window.matchMedia('(hover: none)').matches;
+      if (isTouch) {
+        document.querySelectorAll('.gallery-img').forEach(img => {
+          if (img.parentElement.classList.contains('gallery-img-wrap')) return;
+          const wrap = document.createElement('div');
+          wrap.className = 'gallery-img-wrap';
+          img.parentNode.insertBefore(wrap, img);
+          wrap.appendChild(img);
+        });
+      }
+
       // Click on any project card image or gallery image to open lightbox
       document.querySelectorAll('.project-card-img, .gallery-img').forEach(img => {
         img.style.cursor = 'zoom-in';
