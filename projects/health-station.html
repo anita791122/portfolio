@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-bs-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>智慧健康照護站 — Anita Portfolio</title>
+  <meta name="description" content="社區健康監測 IoT 產品全端設計：量測機台、Web 儀表板、跨平台 APP，含設計系統與完整 User Flow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700;900&family=Outfit:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/custom.css">
+
+  <style>
+    .color-swatch {
+      width: 56px;
+      height: 56px;
+      border-radius: 8px;
+      margin-bottom: 0.4rem;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .swatch-label {
+      font-size: 0.72rem;
+      opacity: 0.7;
+      font-family: 'Inter', monospace;
+    }
+
+    .swatch-name {
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+
+    .flow-step {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 1rem;
+      height: 100%;
+    }
+
+    .flow-step-num {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+
+    .flow-step-title {
+      font-weight: 600;
+      font-size: 0.92rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .flow-step-desc {
+      font-size: 0.8rem;
+      opacity: 0.65;
+      line-height: 1.5;
+    }
+
+    .spec-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      font-size: 0.88rem;
+    }
+
+    .spec-row:last-child {
+      border-bottom: none;
+    }
+
+    .spec-key {
+      opacity: 0.6;
+    }
+
+    .spec-val {
+      font-weight: 500;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-portfolio" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">Anita</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent"
+        aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navContent">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="../index.html#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Project Hero -->
+  <section class="project-hero-section">
+    <div class="project-hero-glow" style="background:radial-gradient(circle,rgba(123,194,53,0.28) 0%,transparent 70%);">
+    </div>
+    <div class="container position-relative" style="z-index:2;">
+      <a href="../index.html#projects" class="back-link mb-4 d-inline-flex">← 返回專案列表</a>
+      <h1 class="project-detail-title mb-3">智慧健康照護站</h1>
+      <p class="project-detail-desc mb-4" style="max-width:740px;">
+        從零打造一套完整的社區健康監測解決方案：整合實體量測機台、跨平台 APP（iOS / Android）與 Web 管理儀表板，建立設計系統確保一致性，以 User Flow 驅動複雜互動邏輯——讓預防醫療真正走入日常生活。
+      </p>
+      <div class="row g-3" style="max-width:760px;">
+        <div class="col-6 col-md-3">
+          <div class="meta-label">角色</div>
+          <div class="meta-value">UI/UX 設計師</div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="meta-label">交付物</div>
+          <div class="meta-value">APP + Web UI + 設計系統</div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="meta-label">領域</div>
+          <div class="meta-value">醫療科技 / 社區健康</div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="meta-label">企業</div>
+          <div class="meta-value">先進醫資</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Content -->
+  <div class="container" style="padding-bottom:3rem;">
+
+    <!-- ── 1. 背景與商業脈絡 ── -->
+    <div class="project-section">
+      <h2 class="project-section-title">背景與商業脈絡</h2>
+      <p>
+        台灣面臨高齡化浪潮加速，慢性病（高血壓、糖尿病）盛行率持續攀升，但傳統「等生病了再看診」的模式讓醫療體系不堪負荷。政府積極推動社區預防保健，衛生所、社區健康中心等機構有強烈的數位化需求，卻缺乏整合硬體與軟體的完整解決方案。
+      </p>
+      <p>
+        對先進醫資而言，這是典型的 <strong>B2G 藍海市場</strong>：政府有預算、有政策支持，但市場上的競品多半只提供單一面向（純硬體量測機 or 純 App
+        紀錄），缺乏串聯整個照護旅程的系統思維。<strong>智慧健康照護站定位為「全端照護解決方案」</strong>，硬體 + APP + Web + 志工後台一次整合，形成高轉換成本的產品護城河。
+      </p>
+      <div class="row g-3 mt-1">
+        <div class="col-md-4">
+          <div class="highlight-card">
+            <h4>市場機會</h4>
+            <p>政府積極採購社區健康監測設備，預防醫療 IoT 市場在高齡化驅動下快速成長</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="highlight-card">
+            <h4>競爭策略</h4>
+            <p>硬體 + 軟體全端整合，客戶無需對接多家供應商，降低導入門檻同時提高替換成本</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="highlight-card">
+            <h4>長尾收益</h4>
+            <p>設備建置為一次性銷售，軟體訂閱與系統維護形成持續性的 ARR（年度經常性收入）</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 2. 產品架構 ── -->
+    <div class="project-section">
+      <h2 class="project-section-title">產品架構：三層整合</h2>
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="highlight-card text-center" style="height:100%;">
+            <div style="font-size:2.2rem;margin-bottom:0.75rem;">🖥️</div>
+            <h4>量測機台</h4>
+            <p>部署於社區的實體 IoT 設備，測量血壓、血氧、額溫、身高、體重，數據藍牙/Wi-Fi 即時上傳雲端</p>
+            <div style="font-size:0.8rem;opacity:0.6;margin-top:0.5rem;">實體接觸點</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="highlight-card text-center" style="height:100%;">
+            <div style="font-size:2.2rem;margin-bottom:0.75rem;">📱</div>
+            <h4>跨平台 APP</h4>
+            <p>iOS / Android 雙平台，民眾隨時查看健康數值、手動輸入、完成篩檢量表、連接藍牙量測設備</p>
+            <div style="font-size:0.8rem;opacity:0.6;margin-top:0.5rem;">日常使用介面</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="highlight-card text-center" style="height:100%;">
+            <div style="font-size:2.2rem;margin-bottom:0.75rem;">🌐</div>
+            <h4>Web 管理平台</h4>
+            <p>PC 端儀表板，供民眾深度查看趨勢、志工管理個案、機構人員產出健康報告與政策彙整數據</p>
+            <div style="font-size:0.8rem;opacity:0.6;margin-top:0.5rem;">管理與服務介面</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 3. 多層次使用者 ── -->
+    <div class="project-section">
+      <h2 class="project-section-title">多層次使用者分析</h2>
+      <div class="table-responsive">
+        <table class="table table-dark table-bordered" style="font-size:0.88rem;">
+          <thead>
+            <tr style="background:rgba(123,194,53,0.12);">
+              <th>使用者角色</th>
+              <th>主要使用情境</th>
+              <th>核心痛點</th>
+              <th>設計對應</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>一般民眾</strong><br><span style="opacity:0.55;font-size:0.78rem;">中高齡為主</span></td>
+              <td>量測後查看數值，判斷自己是否健康，追蹤長期趨勢</td>
+              <td>看不懂數字代表什麼意義，不知道「正不正常」</td>
+              <td>顏色狀態色（紅/橙/綠/藍）+ 參考區間 + 趨勢圖，讓數值有情境</td>
+            </tr>
+            <tr>
+              <td><strong>社區志工</strong><br><span style="opacity:0.55;font-size:0.78rem;">受過基礎培訓</span></td>
+              <td>巡覽社區居民紀錄，找出需要關懷或轉介的高風險個案</td>
+              <td>數據分散、沒有異常警示，難以快速識別需要協助的人</td>
+              <td>Web 志工專區提供清單式批量瀏覽，異常數值視覺標示</td>
+            </tr>
+            <tr>
+              <td><strong>醫療照護人員</strong><br><span style="opacity:0.55;font-size:0.78rem;">衛生所/機構</span></td>
+              <td>需要定期產出社區健康報告交給主管機關，評估計畫成效</td>
+              <td>個別數據難以彙整，製作報告費時費力</td>
+              <td>量表列印功能、Web 後台批量匯出，橋接數位數據與實體報告需求</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- WEB UI 圖片 -->
+    <div style="margin-bottom:2rem;">
+      <div
+        style="font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;opacity:0.45;margin-bottom:0.75rem;padding-left:0.1rem;">
+        WEB UI</div>
+      <img src="../img/health-station-web1.webp" alt="智慧健康照護站 WEB UI — 主面板、篩檢量表、衛教資訊" class="gallery-img" loading="lazy"
+        style="margin-bottom:1rem;">
+      <img src="../img/health-station-web2.webp" alt="智慧健康照護站 WEB UI — 量表列印、志工專區" class="gallery-img" loading="lazy">
+    </div>
+
+    <!-- ── 4. APP 功能設計 ── -->
+    <div class="project-section">
+      <h2 class="project-section-title">APP 功能設計與 PM 決策分析</h2>
+
+      <div class="row g-3">
+
+        <div class="col-md-6">
+          <div class="highlight-card">
+            <h4>登入流程：降低首次使用門檻</h4>
+            <p>
+              提供帳號密碼、LINE、Facebook 三種登入方式。對中高齡使用者而言，記住密碼是主要阻力；社群帳號登入讓已有 LINE 帳號的台灣用戶能零摩擦進入系統。
+            </p>
+            <p style="font-size:0.84rem;opacity:0.7;">
+              <strong>PM Insight：</strong>LINE 在台灣 40 歲以上族群的滲透率極高，以 LINE 登入等同於降低這個核心族群的使用門檻，同時借助社群平台的通知機制，潛在地提升回訪率。
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="highlight-card">
+            <h4>主面板：健康全貌的即時摘要</h4>
+            <p>
+              一頁呈現所有量測指標的最新數值與狀態色，血壓 124/76（正常綠）、血氧 76%（異常紅）、體溫 36.4°C 一眼可辨。底部 Tab Bar 分為紀錄、動態、量表、個人、更多五大功能區。
+            </p>
+            <p style="font-size:0.84rem;opacity:0.7;">
+              <strong>PM Insight：</strong>首屏的設計決策是「讓使用者在 5 秒內判斷今天的健康狀態是否有問題」。這個目標決定了資訊密度的上限——卡片只放最關鍵的數值，趨勢與詳情留給下一層。
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="highlight-card">
+            <h4>手動新增：串接實體設備的橋接設計</h4>
+            <p>
+              除了機台自動上傳，使用者也能手動輸入數值，或透過藍牙連接個人量測設備（血壓計、血糖機）。設備配對流程包含設備掃描、連線確認、量測觸發，整個藍牙 IoT 流程都需要清晰的狀態引導。
+            </p>
+            <p style="font-size:0.84rem;opacity:0.7;">
+              <strong>PM
+                Insight：</strong>「支援個人設備」將產品從「需要去社區站才能量測」進化為「日常家中也能使用」，大幅擴大使用場景，提升數據密度，也讓平台對使用者的黏性從「需要時用」升級為「每天用」。
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="highlight-card">
+            <h4>數值紀錄：趨勢圖 + 參考值的雙層解讀</h4>
+            <p>
+              單一指標頁顯示歷史紀錄清單（每筆附時間戳）與趨勢折線圖，右側同步展示對應的參考區間色階表。使用者能一邊看自己的數值曲線，一邊對照「120-139 是第一期高血壓」的範圍說明。
+            </p>
+            <p style="font-size:0.84rem;opacity:0.7;">
+              <strong>PM Insight：</strong>孤立的數值沒有意義，脈絡才有意義。趨勢 + 參考值的並列設計，讓使用者能自行完成「我的趨勢 × 標準範圍 →
+              我需要就醫嗎？」的判斷，減少對醫護人員的依賴，也降低不必要的門診量。
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="highlight-card">
+            <h4>篩檢量表：從「量測健康」到「評估健康」的功能跨越</h4>
+            <p>
+              篩檢量表是這個產品中含金量最高的差異化功能。除了血壓、體重等生理指標，系統還內建多種標準化篩檢工具，如 <strong>AD-8 早期失智症篩查量表</strong>（共 8
+              題的認知功能評估問卷），使用者完成後系統自動計算分數並提供解讀建議，結果可留存為量表紀錄。
+            </p>
+            <p style="font-size:0.84rem;opacity:0.7;">
+              <strong>PM Insight：</strong>這個功能將產品的服務範疇從「生理量測」延伸到「認知健康評估」，在台灣高齡化背景下具有極強的市場需求（失智症早期發現是政府重點施政）。對 B2G
+              客戶而言，這讓系統更容易對應衛福部的預防保健計畫 KPI，是提高採購意願的關鍵加分項。
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- APP UI 圖片 -->
+    <div style="margin-bottom:2rem;">
+      <div
+        style="font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;opacity:0.45;margin-bottom:0.75rem;padding-left:0.1rem;">
+        APP UI</div>
+      <img src="../img/health-station-app1.webp" alt="智慧健康照護站 APP UI — 登入、主面板、手動新增" class="gallery-img" loading="lazy"
+        style="margin-bottom:1rem;">
+      <img src="../img/health-station-app2.webp" alt="智慧健康照護站 APP UI — 數值紀錄、篩檢量表" class="gallery-img" loading="lazy">
+    </div>
+
+    <!-- ── 5. 設計系統 ── -->
+    <div class="project-section">
+      <h2 class="project-section-title">設計系統：Style Guide 的商業邏輯</h2>
+      <p>跨平台產品（iOS + Android + Web）必須建立統一的設計語言，否則三個平台各自為政，不僅使用者體驗割裂，維護成本也會隨迭代快速累積。</p>
+
+      <div class="row g-3 mt-2 mb-4">
+        <!-- 顏色系統 -->
+        <div class="col-md-6">
+          <div class="highlight-card">
+            <h4 class="mb-3">色彩系統</h4>
+            <!-- 主色 -->
+            <div class="mb-3">
+              <div
+                style="font-size:0.78rem;opacity:0.5;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.6rem;">
+                主色調</div>
+              <div class="d-flex gap-3 flex-wrap">
+                <div class="text-center">
+                  <div class="color-swatch" style="background:#7BC235;"></div>
+                  <div class="swatch-label">#7BC235</div>
+                  <div class="swatch-name">Primary</div>
+                </div>
+                <div class="text-center">
+                  <div class="color-swatch" style="background:#489100;"></div>
+                  <div class="swatch-label">#489100</div>
+                  <div class="swatch-name">Primary Dark</div>
+                </div>
+                <div class="text-center">
+                  <div class="color-swatch" style="background:#40C4FF;"></div>
+                  <div class="swatch-label">#40C4FF</div>
+                  <div class="swatch-name">Accent</div>
+                </div>
+                <div class="text-center">
+                  <div class="color-swatch" style="background:#0094CC;"></div>
+                  <div class="swatch-label">#0094CC</div>
+                  <div class="swatch-name">Accent Dark</div>
+                </div>
+              </div>
+            </div>
+            <!-- 狀態色 -->
+            <div>
+              <div
+                style="font-size:0.78rem;opacity:0.5;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.6rem;">
+                健康狀態色</div>
+              <div class="d-flex gap-3 flex-wrap">
+                <div class="text-center">
+                  <div class="color-swatch" style="background:#E83828;"></div>
+                  <div class="swatch-label">#E83828</div>
+                  <div class="swatch-name">數值過高</div>
+                </div>
+                <div class="text-center">
+                  <div class="color-swatch" style="background:#FF9100;"></div>
+                  <div class="swatch-label">#FF9100</div>
+                  <div class="swatch-name">數值偏高</div>
+                </div>
+                <div class="text-center">
+                  <div class="color-swatch" style="background:#4EBD59;"></div>
+                  <div class="swatch-label">#4EBD59</div>
+                  <div class="swatch-name">數值正常</div>
+                </div>
+                <div class="text-center">
+                  <div class="color-swatch" style="background:#0091EA;"></div>
+                  <div class="swatch-label">#0091EA</div>
+                  <div class="swatch-name">數值偏低</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Typography + Button -->
+        <div class="col-md-6">
+          <div class="highlight-card" style="height:100%;">
+            <h4 class="mb-3">Typography & Components</h4>
+            <div class="spec-row">
+              <span class="spec-key">iOS 字型</span>
+              <span class="spec-val">繁方 / SF Pro Text</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-key">Android 字型</span>
+              <span class="spec-val">思源黑體 / Roboto</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-key">標題</span>
+              <span class="spec-val">18px / #cccccc 80% / Bold</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-key">內文</span>
+              <span class="spec-val">16px / 14px / #cccccc 80%</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-key">按鈕</span>
+              <span class="spec-val">Primary / Secondary / Add（+）三種</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-key">表單狀態</span>
+              <span class="spec-val">一般 / 輸入中 / 錯誤 三種</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-key">Tab Bar</span>
+              <span class="spec-val">紀錄 / 動態 / 量表 / 個人 / 更多</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="highlight-card">
+            <h4>狀態色的醫療語義設計</h4>
+            <p>
+              健康數值的四色系統（紅/橙/綠/藍）直接對應「過高/偏高/正常/偏低」，<strong>顏色本身即是診斷訊號</strong>，使用者不需閱讀文字就能快速辨識。這個設計決策讓色彩在整個產品中具有一致的語義，而非只是美觀元素。
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="highlight-card">
+            <h4>雙平台字型規範</h4>
+            <p>分別定義 iOS（繁方 + SF Pro Text）與 Android（思源黑體 + Roboto）的字型組合，確保在不同作業系統環境下都符合平台原生的閱讀體驗，同時維持視覺風格的一致性。</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="highlight-card">
+            <h4>設計系統的商業價值</h4>
+            <p>一份完整的 Style Guide 讓不同設計師協作時有共同依據，也讓工程師能快速實作而不需逐一詢問規格。<strong>設計系統是壓縮溝通成本、加速迭代速度的基礎建設。</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 6. User Flow ── -->
+    <div class="project-section">
+      <h2 class="project-section-title">User Flow：複雜互動邏輯的系統化梳理</h2>
+      <p>
+        這個產品的互動複雜度遠超一般 App——多種登入方式、藍牙設備配對、多角色後台、多指標追蹤。User Flow 是在設計開始前釐清所有路徑的關鍵工具，它讓設計師、PM 與工程師在同一張圖上對齊認知，避免後期遺漏邊緣情境。
+      </p>
+
+      <div class="row g-2 mt-3">
+        <div class="col-6 col-md-3">
+          <div class="flow-step">
+            <div class="flow-step-num">進入點</div>
+            <div class="flow-step-title">多元登入</div>
+            <div class="flow-step-desc">帳號密碼 / LINE / Facebook 三種入口，新用戶走註冊流程</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="flow-step">
+            <div class="flow-step-num">主線流程</div>
+            <div class="flow-step-title">儀表板 → 詳細紀錄</div>
+            <div class="flow-step-desc">首頁摘要 → 單指標趨勢圖 → 參考值對照，三層資訊深度</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="flow-step">
+            <div class="flow-step-num">資料輸入</div>
+            <div class="flow-step-title">手動新增 + 藍牙配對</div>
+            <div class="flow-step-desc">鍵盤輸入或 BLE 設備掃描 → 連線確認 → 量測觸發 → 數值上傳</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="flow-step">
+            <div class="flow-step-num">延伸功能</div>
+            <div class="flow-step-title">篩檢量表作答</div>
+            <div class="flow-step-desc">選擇量表類型 → 逐題作答 → 自動計分 → 結果解讀 → 紀錄留存</div>
+          </div>
+        </div>
+      </div>
+
+      <p class="mt-4" style="font-size:0.9rem;opacity:0.8;">
+        <strong>Flow 圖帶出的設計洞察：</strong>藍牙設備配對是整個 App 中狀態最多、最容易失敗的流程（搜尋中 / 找不到設備 / 配對失敗 /
+        連線斷線），需要為每個異常狀態設計明確的引導文案與重試機制，而不是只設計「成功路徑」。
+      </p>
+
+      <!-- User Flow 圖片 -->
+      <div style="margin-top:1.5rem;">
+        <div
+          style="font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;opacity:0.45;margin-bottom:0.75rem;">
+          User Flow</div>
+        <img src="../img/health-station-flow.webp" alt="智慧健康照護站 User Flow — 完整互動流程圖" class="gallery-img" loading="lazy">
+      </div>
+    </div>
+
+    <!-- ── 7. 完整照護旅程 ── -->
+    <div class="project-section">
+      <h2 class="project-section-title">完整照護旅程：硬體 × 軟體 × 人的串聯</h2>
+
+      <div class="row g-2">
+        <div class="col">
+          <div class="highlight-card text-center" style="height:100%;">
+            <div style="font-size:1.3rem;font-weight:700;color:var(--accent);">01</div>
+            <div style="font-weight:600;margin:0.5rem 0;font-size:0.88rem;">到站 / 在家量測</div>
+            <div style="font-size:0.78rem;opacity:0.65;">社區機台或個人藍牙設備，數據即時上傳</div>
+          </div>
+        </div>
+        <div class="col-auto d-flex align-items-center" style="opacity:0.3;font-size:1.2rem;">→</div>
+        <div class="col">
+          <div class="highlight-card text-center" style="height:100%;">
+            <div style="font-size:1.3rem;font-weight:700;color:var(--accent);">02</div>
+            <div style="font-weight:600;margin:0.5rem 0;font-size:0.88rem;">查看數值</div>
+            <div style="font-size:0.78rem;opacity:0.65;">APP 儀表板看狀態色 + 趨勢圖</div>
+          </div>
+        </div>
+        <div class="col-auto d-flex align-items-center" style="opacity:0.3;font-size:1.2rem;">→</div>
+        <div class="col">
+          <div class="highlight-card text-center" style="height:100%;border-color:rgba(123,194,53,0.4);">
+            <div style="font-size:1.3rem;font-weight:700;color:var(--accent);">03</div>
+            <div style="font-weight:600;margin:0.5rem 0;font-size:0.88rem;">篩檢量表</div>
+            <div style="font-size:0.78rem;opacity:0.65;">AD-8 等認知功能評估，完整紀錄留存</div>
+            <div style="font-size:0.72rem;color:#86efac;margin-top:0.4rem;">差異化功能</div>
+          </div>
+        </div>
+        <div class="col-auto d-flex align-items-center" style="opacity:0.3;font-size:1.2rem;">→</div>
+        <div class="col">
+          <div class="highlight-card text-center" style="height:100%;border-color:rgba(123,194,53,0.4);">
+            <div style="font-size:1.3rem;font-weight:700;color:var(--accent);">04</div>
+            <div style="font-weight:600;margin:0.5rem 0;font-size:0.88rem;">志工介入</div>
+            <div style="font-size:0.78rem;opacity:0.65;">Web 後台發現異常，主動聯繫高風險個案</div>
+            <div style="font-size:0.72rem;color:#86efac;margin-top:0.4rem;">差異化功能</div>
+          </div>
+        </div>
+        <div class="col-auto d-flex align-items-center" style="opacity:0.3;font-size:1.2rem;">→</div>
+        <div class="col">
+          <div class="highlight-card text-center" style="height:100%;">
+            <div style="font-size:1.3rem;font-weight:700;color:var(--accent);">05</div>
+            <div style="font-weight:600;margin:0.5rem 0;font-size:0.88rem;">就醫銜接</div>
+            <div style="font-size:0.78rem;opacity:0.65;">列印健康報告帶去回診，醫師掌握日常數值</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 9. 設計反思 ── -->
+    <div class="project-section">
+      <h2 class="project-section-title">設計反思與延伸思考</h2>
+      <ul>
+        <li>
+          <strong>數據連續性問題：</strong>使用者若只在覺得不舒服時才量測，歷史趨勢圖就失去預警價值。產品需要「定期量測提醒」機制（Push Notification +
+          社群激勵），才能確保數據足夠密集，讓機器學習模型或基礎趨勢分析真正有效。
+        </li>
+        <li>
+          <strong>藍牙 UX 的隱性成本：</strong>設備配對的技術複雜度對中高齡使用者是顯著門檻。未來可考慮提供「影片教學入口」直接嵌入配對流程的失敗畫面，而非只給文字說明，以降低客服量。
+        </li>
+        <li>
+          <strong>篩檢量表的醫療邊界：</strong>AD-8 是篩查工具，不是診斷工具。設計上需要非常謹慎地處理結果呈現的措辭——「建議諮詢醫師」而非「您可能有失智症」。這個文案邊界需要設計師、PM
+          與醫療顧問共同確認，不能只由設計師自行判斷。
+        </li>
+        <li>
+          <strong>B2G
+            的驗收邏輯：</strong>政府客戶的採購驗收常以「功能清單」為準，容易讓開發團隊著重功能完整度而非使用者體驗品質。設計師需要在專案早期就建立「易用性標準」並納入驗收條件，否則設計品質容易在後期被壓縮。
+        </li>
+      </ul>
+      <p class="mt-3">
+        這個專案讓我第一次完整經歷「從零建立設計系統」的過程——Style Guide
+        不只是顏色表，更是跨平台設計決策的成文化。<strong>一個好的設計系統讓整個團隊能快速決策、降低溝通成本，這是設計師能為產品組織貢獻的長期基礎建設價值。</strong>
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Other Projects -->
+  <div class="other-projects">
+    <div class="container">
+      <h3>其他專案</h3>
+      <div class="row g-3">
+        <div class="col-md-4"><a href="nhi-card.html" class="other-project-card d-block">
+            <h4>虛擬健保卡就醫應用 APP</h4>
+            <p>APP — UI/UX — 醫療科技</p>
+          </a></div>
+        <div class="col-md-4"><a href="ehis-redesign.html" class="other-project-card d-block">
+            <h4>eHIS 醫療系統優化</h4>
+            <p>Web System — 醫療資訊</p>
+          </a></div>
+        <div class="col-md-4"><a href="health-platform.html" class="other-project-card d-block">
+            <h4>健康促進資訊整合平台</h4>
+            <p>Web — Redesign — 公共衛生</p>
+          </a></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer text-center">
+    <div class="container">&copy; 2026 Anita. All rights reserved.</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/main.js"></script>
+  <button id="backToTop" class="back-to-top" aria-label="回到最上方">
+    <svg viewBox="0 0 24 24">
+      <polyline points="18 15 12 9 6 15" />
+    </svg>
+  </button>
+</body>
+
+</html>
