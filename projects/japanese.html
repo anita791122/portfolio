@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-bs-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>日文道場 — Anita Portfolio</title>
+  <meta name="description" content="以 PM 思維打造的 Side Project：用遊戲化機制提升日文自學留存率，從零到一獨立完成設計與開發">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700;900&family=Outfit:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/custom.css">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-portfolio" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">Anita</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent"
+        aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navContent">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="../index.html#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Project Hero -->
+  <section class="project-hero-section">
+    <div class="project-hero-glow" style="background:radial-gradient(circle,rgba(79,195,247,0.35) 0%,transparent 70%);">
+    </div>
+    <div class="container position-relative" style="z-index:2;">
+      <a href="../index.html#projects" class="back-link mb-4 d-inline-flex">← 返回專案列表</a>
+      <h1 class="project-detail-title mb-3">日文道場 — Nihongo Dojo</h1>
+      <p class="project-detail-desc mb-4" style="max-width:760px;">
+        一個以「讓自學者真的學得下去」為核心命題的 Side Project。<br>
+        透過遊戲化留存機制、完整的學習閉環設計，加上 Material Design 3 沉浸式 UI，<br>
+        從零到一由一人完成設計、開發與發布。
+      </p>
+      <div class="row g-3" style="max-width:700px;">
+        <div class="col-6 col-md-3">
+          <div class="meta-label">角色</div>
+          <div class="meta-value">PM × UI/UX × 前端</div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="meta-label">類型</div>
+          <div class="meta-value">Side Project</div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="meta-label">設計系統</div>
+          <div class="meta-value">Material Design 3</div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="meta-label">技術</div>
+          <div class="meta-value">HTML / CSS / JS</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <div class="container" style="padding-bottom:3rem;">
+
+    <!-- 1. 背景與問題 -->
+    <div class="project-section">
+      <h2 class="project-section-title">背景：為什麼要做這個？</h2>
+      <p>
+        開始自學日文後，我快速發現一個矛盾：市面上的學習工具要嘛功能太複雜（讓人不知從何開始），要嘛太枯燥（背了三天就放棄）。<br>
+        Duolingo 雖然好，但 N5 文法的課表與台灣人習慣的說法不完全契合。
+      </p>
+      <p>
+        這個問題對我而言是真實需求，也是一個可以同時練習「設計思維 + PM 產品規劃 + 前端實作」的好機會。
+        於是我決定：<strong>自己打造一個專屬的學習工具。</strong>
+      </p>
+
+      <div class="row g-3 mt-2">
+        <div class="col-md-4">
+          <div class="pm-insight-card">
+            <h5>User Pain Point</h5>
+            <p>自學者缺乏即時回饋，學完一個單元不知道自己「到底學進去沒有」，導致動力快速流失。</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="pm-insight-card">
+            <h5>Market Gap</h5>
+            <p>台灣繁體中文 N5 學習資源以靜態教材為主，互動性強且設計品質高的工具稀缺。</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="pm-insight-card">
+            <h5>Opportunity</h5>
+            <p>遊戲化 + 深度客製化內容（台灣情境的會話練習）+ 高品質 UI，三者同時到位的競品幾乎為零。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. 產品定位 -->
+    <div class="project-section">
+      <h2 class="project-section-title">產品定位與競品分析</h2>
+
+      <table class="compete-table">
+        <thead>
+          <tr>
+            <th>工具</th>
+            <th>遊戲化機制</th>
+            <th>繁中情境</th>
+            <th>離線可用</th>
+            <th>客製化程度</th>
+            <th>UI 品質</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>日文道場</strong></td>
+            <td class="badge-yes">✓ XP / 連勝 / 愛心</td>
+            <td class="badge-yes">✓ 台灣情境</td>
+            <td class="badge-yes">✓ 純前端</td>
+            <td class="badge-yes">✓ 完全可控</td>
+            <td class="badge-yes">✓ MD3 Dark</td>
+          </tr>
+          <tr>
+            <td>Duolingo</td>
+            <td class="badge-yes">✓ 完整</td>
+            <td class="badge-part">△ 非繁中導向</td>
+            <td class="badge-no">✗ 需登入</td>
+            <td class="badge-no">✗ 無</td>
+            <td class="badge-yes">✓ 高</td>
+          </tr>
+          <tr>
+            <td>Anki</td>
+            <td class="badge-no">✗ 無</td>
+            <td class="badge-part">△ 自建牌組</td>
+            <td class="badge-yes">✓</td>
+            <td class="badge-yes">✓ 高</td>
+            <td class="badge-no">✗ 低</td>
+          </tr>
+          <tr>
+            <td>傳統教材 PDF</td>
+            <td class="badge-no">✗ 無</td>
+            <td class="badge-part">△ 因書而異</td>
+            <td class="badge-yes">✓</td>
+            <td class="badge-no">✗ 無</td>
+            <td class="badge-no">✗ 低</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>日文道場的差異化主軸是：<strong>台灣學習者視角 × 遊戲化留存 × 沉浸式 UI</strong>，三者合一。</p>
+    </div>
+
+    <!-- 3. 核心功能設計 -->
+    <div class="project-section">
+      <h2 class="project-section-title">功能架構：以留存為核心的產品設計</h2>
+      <p>
+        從 PM 視角出發，每個功能的存在都必須服務於「讓使用者明天還想回來」這個核心目標。
+        以下五大模組各自對應不同的學習階段與留存機制：
+      </p>
+
+      <div class="feature-map">
+        <div class="feature-item">
+          <span class="feature-icon">📚</span>
+          <div>
+            <h5>課程系統</h5>
+            <p>結構化的 N5 學習路徑，含單字、文法、會話三個維度，清楚顯示進度與解鎖狀態，製造「下一關」的驅動感。</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">🃏</span>
+          <div>
+            <h5>單字卡（Flashcard）</h5>
+            <p>3D 翻牌動效 + 語音朗讀（TTS）。「不記得 / 記得」雙選反饋，模擬間隔記憶邏輯，加速記憶鞏固。</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">🎯</span>
+          <div>
+            <h5>測驗（Quiz）</h5>
+            <p>四選一選擇題 + 填空輸入雙模式，答題後即時顯示正誤反饋與解釋，搭配愛心系統製造適度緊張感。</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">🔗</span>
+          <div>
+            <h5>配對遊戲（Matching）</h5>
+            <p>日文 ↔ 中文連連看，答錯時震動動畫 + 扣心機制，讓「失敗成本」成為記憶的錨點。</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">📖</span>
+          <div>
+            <h5>文法說明</h5>
+            <p>重點句型 + 波浪底線標注 + 多組例句，採台灣日常情境（購物、問路、餐廳），讓語法學習不脫離實用脈絡。</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">💬</span>
+          <div>
+            <h5>情境會話</h5>
+            <p>分角色的對話場景（A/B 雙角色 + 店員/客人），搭配 TTS 逐句朗讀，模擬真實對話節奏。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. 留存機制 -->
+    <div class="project-section">
+      <h2 class="project-section-title">商業思維：遊戲化留存機制拆解</h2>
+      <p>
+        參考 Duolingo 的核心留存邏輯，並針對「沒有帳號系統的 Side Project」重新設計適合的輕量化版本：
+      </p>
+
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="highlight-card">
+            <h4>🔥 連勝天數（Streak）</h4>
+            <p>最強的回訪驅動力之一。使用者一旦建立「連勝記錄」，為了「不讓數字歸零」而每天回來的動機遠超過「想學習」本身。這是 Duolingo 留存率的核心支柱之一。</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="highlight-card">
+            <h4>⚡ XP 升級系統</h4>
+            <p>每完成一個練習獲得 XP，累積至 500 XP 升級。進度條讓使用者清楚看到「距離下一個里程碑還差多少」，製造 Endowed Progress Effect（已擁有進度捨不得放棄）。</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="highlight-card">
+            <h4>❤️ 愛心（Lives）系統</h4>
+            <p>測驗中限制犯錯次數，答錯扣心。適度的失敗成本讓使用者認真作答，避免無腦亂點，也讓「心全部消耗」成為一個自然的回訪觸發點。</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="highlight-card">
+            <h4>✨ 即時正向反饋</h4>
+            <p>每次答對顯示 XP 浮動數字動畫（+10 XP），答題完成後呈現「太棒了！」完成頁，搭配正確率、用時、獲得 XP 等統計，讓每次練習都有明確的成就感。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="metric-row">
+        <div class="metric-card">
+          <div class="val">5</div>
+          <div class="lbl">核心學習模組</div>
+        </div>
+        <div class="metric-card">
+          <div class="val">3</div>
+          <div class="lbl">留存機制（Streak / XP / Hearts）</div>
+        </div>
+        <div class="metric-card">
+          <div class="val">1</div>
+          <div class="lbl">人完成設計 + 開發 + 上線</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. Live Preview -->
+    <div class="project-section">
+      <h2 class="project-section-title">頁面預覽</h2>
+      <p>以下為各主要功能畫面的實際樣式，採 Material Design 3 Dark Theme，完整響應式支援手機、平板、桌機三種排版。</p>
+
+      <!-- Full browser frame embed -->
+      <div class="browser-frame">
+        <div class="browser-topbar">
+          <div class="browser-dots">
+            <span class="dot-red"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-green"></span>
+          </div>
+          <div class="browser-url">https://anita791122.github.io/japanese/</div>
+        </div>
+        <iframe src="https://anita791122.github.io/japanese/" title="日文道場 Live Preview" loading="lazy"
+          sandbox="allow-scripts allow-same-origin">
+        </iframe>
+      </div>
+
+      <p class="text-center" style="font-size:.85rem; color:#80939A; margin-top:-8px;">
+        ↑ 可直接在此互動操作，或
+        <a href="https://anita791122.github.io/japanese/" target="_blank" rel="noopener"
+          style="color:#4FC3F7;">點此全螢幕開啟</a>
+      </p>
+    </div>
+
+    <!-- 6. 設計系統 -->
+    <div class="project-section">
+      <h2 class="project-section-title">設計決策：為什麼選 Material Design 3？</h2>
+
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="pm-insight-card">
+            <h5>Dark Mode First</h5>
+            <p>深夜睡前記單字是高頻使用情境。深色介面降低眼睛負擔，也讓日文假名在深色背景上更易辨讀。主色 Cyan-Blue（#4FC3F7）在深色背景有高對比，符合 WCAG 可及性標準。</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pm-insight-card">
+            <h5>Adaptive Navigation</h5>
+            <p>手機 → Bottom Navigation Bar；平板 → Nav Rail；桌機 → Navigation Drawer。一套 CSS + media query 實現三段響應式導航，與 MD3
+              官方設計規範完全對應。</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pm-insight-card">
+            <h5>Motion Design</h5>
+            <p>單字卡翻牌、畫面切換、XP 浮動數字全部有專屬動畫。Emphasized Easing（cubic-bezier(.2,0,0,1.4)）讓互動有彈性感，提升操作的愉悅度。</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pm-insight-card">
+            <h5>零框架純實作</h5>
+            <p>以原生 HTML / CSS / JS 完成。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7. 反思與下一步 -->
+    <div class="project-section">
+      <h2 class="project-section-title">反思：如果這是一個真實產品，接下來要做什麼？</h2>
+      <p>
+        以 PM 視角來看，目前的版本是一個功能完整的 MVP（Minimum Viable Product）。
+        如果要往「真正的產品」演進，我會優先做以下三件事：
+      </p>
+      <ul>
+        <li><strong>建立帳號系統 + 雲端進度同步</strong>：目前進度存在 localStorage，換裝置即消失。Streak 的留存力量必須跨裝置才能真正生效。</li>
+        <li><strong>導入分析儀表板</strong>：追蹤「哪些單字答錯率最高」「使用者在哪個步驟流失」，以數據驅動課程內容迭代，而非憑感覺新增教材。</li>
+        <li><strong>社群 / 排行榜機制</strong>：Duolingo 最強的留存手段之一是同儕競爭。加入「本週積分排行」或「揪朋友一起學」，可大幅提升網路效應與自然分享率。</li>
+      </ul>
+
+      <div class="row g-3 mt-2">
+        <div class="col-md-4">
+          <div class="pm-insight-card">
+            <h5>PM Takeaway #1</h5>
+            <p>遊戲化不是「加點數就好」，需要理解每個機制背後的心理學原理，才能設計出真正有效的留存工具。</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="pm-insight-card">
+            <h5>PM Takeaway #2</h5>
+            <p>「設計者即使用者」的 Side Project 雖然驗證成本最低，但也最容易陷入個人偏見；真正的 PM 工作需要超越自己的使用情境去思考。</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="pm-insight-card">
+            <h5>PM Takeaway #3</h5>
+            <p>從零到一獨力完成讓我深刻理解「設計可行性」：哪些互動效果在純 CSS 實現時有技術天花板，哪些需要 JS 支援，影響後續與工程師溝通的精準度。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Other Projects -->
+  <div class="other-projects">
+    <div class="container">
+      <h3>其他專案</h3>
+      <div class="row g-3">
+        <div class="col-md-4">
+          <a href="vaccine.html" class="other-project-card d-block">
+            <h4>新竹市疫苗預約系統</h4>
+            <p>Web — UI/UX + 前端 — 公共服務</p>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="nhi-card.html" class="other-project-card d-block">
+            <h4>虛擬健保卡就醫應用 APP</h4>
+            <p>APP — UI/UX — 醫療健康</p>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="linepay-bill.html" class="other-project-card d-block">
+            <h4>LINE Pay 生活繳費</h4>
+            <p>APP — UI/UX — 金融科技</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer text-center">
+    <div class="container">&copy; 2026 Anita. All rights reserved.</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/main.js"></script>
+  <button id="backToTop" class="back-to-top" aria-label="回到最上方">
+    <svg viewBox="0 0 24 24">
+      <polyline points="18 15 12 9 6 15" />
+    </svg>
+  </button>
+
+</body>
+
+</html>
