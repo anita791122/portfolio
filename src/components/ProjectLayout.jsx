@@ -3,16 +3,18 @@ import { Link } from 'react-router-dom'
 import Footer from './Footer'
 import Lightbox, { openLightbox } from './Lightbox'
 import BackToTop from './BackToTop'
+import { ip } from '../utils/imgPath'
 
 export function GalleryImg({ src, alt, style, className }) {
+  const fullSrc = ip(src)
   return (
     <img
-      src={src}
+      src={fullSrc}
       alt={alt}
       className={`gallery-img${className ? ' ' + className : ''}`}
       loading="lazy"
       style={{ cursor: 'zoom-in', ...style }}
-      onClick={() => openLightbox(src, alt)}
+      onClick={() => openLightbox(fullSrc, alt)}
     />
   )
 }

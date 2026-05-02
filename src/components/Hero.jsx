@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { ip } from '../utils/imgPath'
 
 export default function Hero() {
   const bgLayerRef = useRef(null)
@@ -92,7 +93,7 @@ export default function Hero() {
           </div>
           <div className="col-lg-5 d-none d-lg-flex justify-content-center hero-animate">
             <div className="hero-photo-wrapper" data-parallax-speed="-0.08">
-              <img src="/img/img_photo.avif" alt="Anita — Product Designer" className="hero-photo" loading="eager" />
+              <img src={ip('/img/img_photo.avif')} alt="Anita — Product Designer" className="hero-photo" loading="eager" />
             </div>
           </div>
         </div>

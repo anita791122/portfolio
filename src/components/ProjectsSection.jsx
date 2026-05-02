@@ -1,6 +1,7 @@
 import { useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useFadeUp } from '../hooks/useFadeUp'
+import { ip } from '../utils/imgPath'
 
 const featuredProjects = [
   {
@@ -126,7 +127,7 @@ function FeaturedCard({ project }) {
   return (
     <Link to={href} className={`pf-card fade-up${reverse ? ' pf-card--reverse' : ''}`}>
       <div className="pf-card__image">
-        <img src={image} alt={alt} loading="lazy" />
+        <img src={ip(image)} alt={alt} loading="lazy" />
       </div>
       <div className="pf-card__info">
         <div className="pf-card__tags">
@@ -171,7 +172,7 @@ function MoreCard({ project, index }) {
       >
         <div className="project-card-image">
           {image ? (
-            <img src={image} alt={alt} className="project-card-img" loading="lazy" />
+            <img src={ip(image)} alt={alt} className="project-card-img" loading="lazy" />
           ) : (
             <div className="placeholder-bg" style={placeholderStyle}>
               <span className="placeholder-label" style={placeholderLabelStyle}>

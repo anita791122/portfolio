@@ -1,4 +1,5 @@
 import ProjectLayout, { GalleryImg, ProjectImageBlock, HighlightCard } from '../../components/ProjectLayout'
+import { ip } from '../../utils/imgPath'
 
 const meta = [
   { label: '角色', value: 'UI/UX + 前端切版' },
@@ -77,7 +78,7 @@ export default function Vaccine() {
         <p>公共服務設計的核心是「包容性」— 不能假設所有使用者都熟悉網路操作。<br />這個專案不僅完成了 UI/UX 設計，同時也負責前端切版實作，確保設計意圖能精確還原到最終產品中。<br />從設計到開發的端到端參與，讓我對設計的可行性與工程限制有更深刻的理解。</p>
         <a href="https://anita791122.github.io/project_hccg/index.html" target="_blank" rel="noopener noreferrer" className="project-live-link">
           查看實作成果 ↗
-          <img src="/img/arrow.svg" alt="" aria-hidden="true" className="project-live-link__icon" />
+          <img src={ip('/img/arrow.svg')} alt="" aria-hidden="true" className="project-live-link__icon" />
         </a>
       </div>
     </ProjectLayout>

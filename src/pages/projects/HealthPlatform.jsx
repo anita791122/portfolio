@@ -1,4 +1,5 @@
 import ProjectLayout, { GalleryImg, ProjectImageBlock, HighlightCard } from '../../components/ProjectLayout'
+import { ip } from '../../utils/imgPath'
 
 const meta = [
   { label: '角色', value: 'UI/UX Designer' },
@@ -71,7 +72,7 @@ export default function HealthPlatform() {
         <p>Redesign 不只是「讓介面變好看」，更重要的是重新建立使用者與系統之間的信任關係。<br />這個專案透過系統性的資訊架構重整和認知負擔的降低，讓一個功能複雜的公共平台變得可理解、可操作、可信賴。設計過程中建立的模組化元件系統，也為未來的功能擴充提供了可擴展的基礎。</p>
         <a href="https://hpdcs.hpa.gov.tw/index.aspx" target="_blank" rel="noopener noreferrer" className="project-live-link">
           瀏覽網頁
-          <img src="/img/arrow.svg" alt="" aria-hidden="true" className="project-live-link__icon" />
+          <img src={ip('/img/arrow.svg')} alt="" aria-hidden="true" className="project-live-link__icon" />
         </a>
       </div>
     </ProjectLayout>

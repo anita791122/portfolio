@@ -1,4 +1,5 @@
 import ProjectLayout, { GalleryImg, HighlightCard } from '../../components/ProjectLayout'
+import { ip } from '../../utils/imgPath'
 
 const meta = [
   { label: '角色', value: 'UI/UX + 前端' },
@@ -83,7 +84,7 @@ export default function EventRegister() {
         <p className="mt-3">這個案例讓我深刻理解：<strong>一個看似簡單的活動登錄頁面，其實是政策落地、商業目標與使用者體驗三方博弈的縮影</strong>。設計師若只關注視覺呈現，會錯過那些真正影響專案成敗的系統性問題。</p>
         <a href="https://anita791122.github.io/event_register3/index.html" target="_blank" rel="noopener noreferrer" className="project-live-link">
           查看實作成果 ↗
-          <img src="/img/arrow.svg" alt="" aria-hidden="true" className="project-live-link__icon" />
+          <img src={ip('/img/arrow.svg')} alt="" aria-hidden="true" className="project-live-link__icon" />
         </a>
       </div>
     </ProjectLayout>
