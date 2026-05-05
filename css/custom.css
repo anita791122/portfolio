@@ -1551,6 +1551,14 @@ img {
     padding-right: 1rem;
   }
 
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .project-detail-title {
+    font-size: 2.8rem;
+  }
+
   .hero-stats {
     gap: 1.25rem;
   }
@@ -1563,34 +1571,41 @@ img {
     font-size: 2.25rem;
   }
 
-  .navbar-portfolio .navbar-collapse.show {
+  .navbar-portfolio .navbar-collapse.show,
+  .navbar-portfolio .navbar-collapse.collapsing {
     background-color: #ffffff;
     padding: 0.75rem 1rem 0;
     border-radius: 8px;
     margin-top: 0.5rem;
   }
 
-  .navbar-portfolio .navbar-collapse.show .navbar-nav {
+  .navbar-portfolio .navbar-collapse.show .navbar-nav,
+  .navbar-portfolio .navbar-collapse.collapsing .navbar-nav {
     align-items: center;
   }
 
-  .navbar-portfolio .navbar-collapse.show .nav-item {
+  .navbar-portfolio .navbar-collapse.show .nav-item,
+  .navbar-portfolio .navbar-collapse.collapsing .nav-item {
     width: 100%;
     border-bottom: 1px solid var(--accent);
   }
 
-  .navbar-portfolio .navbar-collapse.show .nav-item:last-child {
+  .navbar-portfolio .navbar-collapse.show .nav-item:last-child,
+  .navbar-portfolio .navbar-collapse.collapsing .nav-item:last-child {
     border-bottom: none;
   }
 
-  .navbar-portfolio .navbar-collapse.show .nav-link {
+  .navbar-portfolio .navbar-collapse.show .nav-link,
+  .navbar-portfolio .navbar-collapse.collapsing .nav-link {
     color: #111111 !important;
     text-align: center;
     padding: 0.75rem 0;
   }
 
   .navbar-portfolio .navbar-collapse.show .nav-link:hover,
-  .navbar-portfolio .navbar-collapse.show .nav-link.active {
+  .navbar-portfolio .navbar-collapse.show .nav-link.active,
+  .navbar-portfolio .navbar-collapse.collapsing .nav-link:hover,
+  .navbar-portfolio .navbar-collapse.collapsing .nav-link.active {
     color: #016194 !important;
   }
 

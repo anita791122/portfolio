@@ -74,13 +74,13 @@ export default function Hero() {
             <div className="hero-stats mb-4 hero-animate">
               <div className="hero-stat" data-parallax-speed="-0.05">
                 <div className="stat-number" data-count="10">10</div>
-                <div className="stat-label">年設計經驗</div>
                 <div className="stat-plus">+</div>
+                <div className="stat-label">年設計經驗</div>
               </div>
               <div className="hero-stat" data-parallax-speed="-0.08">
                 <div className="stat-number" data-count="15">15</div>
-                <div className="stat-label">產品專案</div>
                 <div className="stat-plus">+</div>
+                <div className="stat-label">產品專案</div>
               </div>
               <div className="hero-stat" data-parallax-speed="-0.1">
                 <div className="stat-number" data-count="4">4</div>
