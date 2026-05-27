@@ -68,9 +68,9 @@ export default function Hero() {
               打造有意義的產品體驗
             </h2>
             <p className="hero-subtitle mb-4 hero-animate" style={{ maxWidth: '680px' }}>
-              UI/UX 設計師,10+ 年跨產業設計經驗。<br>
-              專長橫跨金融科技(LINE Pay、一卡通)、醫療系統(eHIS、虛擬健保卡)與政府公部門產品。<br>擅長在商業限制下推動體驗優化,與 PM、工程師協作將需求轉化為可落地的設計方案。
-              近期積極實踐 AI 設計工作流,將 ChatGPT、Claude Code、Google Antigravity 等工具融入日常設計流程,<br>從 UX Writing 到原型實作,讓 AI 成為設計探索的夥伴。
+              UI/UX 設計師,10+ 年跨產業設計經驗。<br />
+              專長橫跨金融科技(LINE Pay、一卡通)、醫療系統(eHIS、虛擬健保卡)與政府公部門產品。<br />擅長在商業限制下推動體驗優化,與 PM、工程師協作將需求轉化為可落地的設計方案。
+              近期積極實踐 AI 設計工作流,將 ChatGPT、Claude Code、Google Antigravity 等工具融入日常設計流程,<br />從 UX Writing 到原型實作,讓 AI 成為設計探索的夥伴。
             </p>
             <div className="hero-stats mb-4 hero-animate">
               <div className="hero-stat" data-parallax-speed="-0.05">
