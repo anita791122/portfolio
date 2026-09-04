@@ -5,6 +5,22 @@ import { ip } from '../utils/imgPath'
 
 const featuredProjects = [
   {
+    href: '/projects/londonimg-system',
+    image: null,
+    placeholderStyle: { background: 'linear-gradient(135deg,#3b2d5c 0%,#221a38 60%,#15101f 100%)' },
+    placeholderLabel: '13 積木\n× AI 內容工具',
+    alt: '倫敦印象商品頁模組化系統與 AI 內容工具',
+    tags: ['內部工具', '設計系統', 'AI 工作流'],
+    title: '讓不懂語法的同事自己做出商品頁',
+    desc: '一個人要顧 350 個商品頁，真正的瓶頸是產能。把商品頁拆成 13 種可複用積木，配線上手冊與同事可自行安裝的 AI 內容工具，並在工具裡內建護欄，避免 AI 產出不實宣稱。',
+    meta: [
+      { label: '角色', value: '產品設計師' },
+      { label: '企業', value: '倫敦印象' },
+      { label: '關鍵挑戰', value: '讓非專業使用者安全地用 AI' },
+    ],
+    reverse: false,
+  },
+  {
     href: '/projects/vaccine',
     image: '/img/web-hccg.avif',
     alt: '新竹市疫苗預約系統',
@@ -16,7 +32,7 @@ const featuredProjects = [
       { label: '企業', value: '資拓宏宇' },
       { label: '關鍵挑戰', value: '降低公共系統認知負荷' },
     ],
-    reverse: false,
+    reverse: true,
   },
   {
     href: '/projects/nhi-card',
@@ -30,7 +46,7 @@ const featuredProjects = [
       { label: '企業', value: '資拓宏宇' },
       { label: '關鍵挑戰', value: '醫療×科技跨域設計' },
     ],
-    reverse: true,
+    reverse: false,
   },
   {
     href: '/projects/linepay-bill',
@@ -44,7 +60,7 @@ const featuredProjects = [
       { label: '企業', value: '一卡通票證' },
       { label: '關鍵挑戰', value: '平台限制下的 UX 平衡' },
     ],
-    reverse: false,
+    reverse: true,
   },
 ]
 
@@ -123,11 +139,24 @@ const moreProjects = [
 ]
 
 function FeaturedCard({ project }) {
-  const { href, image, alt, tags, title, desc, meta, reverse } = project
+  const { href, image, alt, placeholderStyle, placeholderLabel, tags, title, desc, meta, reverse } = project
   return (
     <Link to={href} className={`pf-card fade-up${reverse ? ' pf-card--reverse' : ''}`}>
       <div className="pf-card__image">
-        <img src={ip(image)} alt={alt} loading="lazy" />
+        {image ? (
+          <img src={ip(image)} alt={alt} loading="lazy" />
+        ) : (
+          <div
+            className="placeholder-bg"
+            role="img"
+            aria-label={alt}
+            style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', ...placeholderStyle }}
+          >
+            <span className="placeholder-label" style={{ fontSize: '1.4rem', textAlign: 'center', padding: '0 1rem', whiteSpace: 'pre-line' }}>
+              {placeholderLabel}
+            </span>
+          </div>
+        )}
       </div>
       <div className="pf-card__info">
         <div className="pf-card__tags">

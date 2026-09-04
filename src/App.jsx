@@ -12,6 +12,7 @@ import EventRegister from './pages/projects/EventRegister'
 import TicketDesign from './pages/projects/TicketDesign'
 import VisualDesign from './pages/projects/VisualDesign'
 import Japanese from './pages/projects/Japanese'
+import LondonimgSystem from './pages/projects/LondonimgSystem'
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/projects/londonimg-system" element={<LondonimgSystem />} />
         <Route path="/projects/vaccine" element={<Vaccine />} />
         <Route path="/projects/nhi-card" element={<NhiCard />} />
         <Route path="/projects/linepay-bill" element={<LinepayBill />} />
