@@ -29,7 +29,7 @@ export default function VisualDesign() {
   return (
     <ProjectLayout
       title="廣告宣傳品"
-      description="涵蓋活動主視覺、社群行銷素材、印刷品設計等多元媒介的視覺設計作品，從概念發想到視覺執行，展現跨媒介的設計整合能力。"
+      description="歷年的活動主視覺、社群行銷素材與印刷品設計，涵蓋數位與印刷兩種媒介。"
       glowStyle={{ background: 'radial-gradient(circle,rgba(180,160,212,0.35) 0%,transparent 70%)' }}
       meta={meta}
       otherProjects={otherProjects}
@@ -50,7 +50,7 @@ export default function VisualDesign() {
 
       <div className="project-section">
         <h2 className="project-section-title">設計價值</h2>
-        <p>廣告宣傳品設計不僅是視覺美感的展現，更是品牌訊息傳達的關鍵環節。<br />每一件作品都需要在有限的版面中精準傳達核心訊息，同時維持品牌一致性。這些跨媒介的設計經驗，讓我在數位介面設計中也能更敏銳地掌握視覺層級與資訊傳達的節奏。</p>
+        <p>宣傳品的版面通常很小，讀者也只會看一眼。所以每一件都要先決定「這次只講一句話是哪一句」，其餘往後排。</p><p>這個習慣後來直接帶進介面設計：畫面上永遠要有一個最重要的東西，其他不能跟它搶。</p>
       </div>
     </ProjectLayout>
   )

@@ -35,7 +35,7 @@ export default function EhisRedesign() {
   return (
     <ProjectLayout
       title="eHIS 醫療系統看診介面優化"
-      description="以使用者情境出發，重構醫師看診工作介面——精煉資訊層級、重組功能按鈕、優化版面佈局，讓醫師在高壓看診環境中無需捲動頁面即可掌握所有關鍵資訊，專注於病患本身。"
+      description="重構醫師的看診工作介面：精煉資訊層級、重組功能按鈕、壓縮版面佈局，讓醫師在單一視窗就能掌握看診所需的全部資訊，不必捲動頁面。"
       glowStyle={{ background: 'radial-gradient(circle,rgba(99,179,237,0.35) 0%,transparent 70%)' }}
       meta={meta}
       otherProjects={otherProjects}
@@ -102,7 +102,7 @@ export default function EhisRedesign() {
         </div>
         <div style={{ ...pmCallout, marginTop: '1.5rem' }}>
           <div style={{ fontFamily: 'var(--font-display)', fontSize: '1rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--accent)', marginBottom: '0.5rem' }}>PM Insight — 設計決策取捨</div>
-          <p style={{ fontSize: 'var(--fs-small)', color: 'var(--text-secondary)', lineHeight: 1.75, margin: 0 }}>此次優化最關鍵的取捨在於「患者資訊的顯示範圍」。<br />完整資訊的揭露對某些工作流程有其必要性，因此保留「基本資料編輯」入口，讓需要查看完整資料的醫師仍可快速切換，而非完全隱藏——這是在「單一視窗高效率」與「完整資訊可及性」之間的平衡點。</p>
+          <p style={{ fontSize: 'var(--fs-small)', color: 'var(--text-secondary)', lineHeight: 1.75, margin: 0 }}>此次優化最關鍵的取捨在於「患者資訊的顯示範圍」。<br />完整資訊的揭露對某些工作流程有其必要性，因此保留「基本資料編輯」入口，讓需要查看完整資料的醫師仍可快速切換，而非完全隱藏。這是在「單一視窗高效率」與「完整資訊可及性」之間的取捨點。</p>
         </div>
       </div>
 
@@ -133,7 +133,7 @@ export default function EhisRedesign() {
         <p>這個案例的核心價值不在於視覺美化，而是通過以使用者情境為基礎的設計決策，解決真實工作流中的效率瓶頸。</p>
         <div style={{ ...pmCallout, marginTop: '1.5rem' }}>
           <div style={{ fontFamily: 'var(--font-display)', fontSize: '1rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--accent)', marginBottom: '0.5rem' }}>PM Reflection — 從這個專案學到的</div>
-          <p style={{ fontSize: 'var(--fs-small)', color: 'var(--text-secondary)', lineHeight: 1.75, margin: 0 }}>醫療資訊系統的設計限制通常比消費性產品嚴格許多——系統需求複雜、利害關係人眾多、改動成本高。<br />這個案例讓我學會在有限的範圍內找到最大的改善槓桿點：不是從零開始重做，而是識別出造成最大痛點的三個關鍵問題，針對性地解決。</p>
+          <p style={{ fontSize: 'var(--fs-small)', color: 'var(--text-secondary)', lineHeight: 1.75, margin: 0 }}>醫療資訊系統的設計限制比消費性產品嚴格：系統需求複雜、利害關係人多、改動成本高。<br />這個案例讓我學會在有限的範圍內找槓桿點：不從零重做，而是先找出造成最大痛點的三個問題，只解那三個。</p>
         </div>
       </div>
     </ProjectLayout>

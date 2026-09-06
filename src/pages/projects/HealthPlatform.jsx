@@ -18,7 +18,7 @@ export default function HealthPlatform() {
   return (
     <ProjectLayout
       title="健康促進資訊整合平台"
-      description="針對原平台資訊層級混亂、操作指引不明、視覺過時三大問題，進行系統性的 Redesign，重建認知順序與任務流程，提升平台的專業可信度與使用效率。"
+      description="原平台有三個問題：資訊層級混亂、操作指引不明、視覺過時。這次 Redesign 重建了登入後的認知順序與任務流程。"
       glowStyle={{ background: 'radial-gradient(circle,rgba(6,182,212,0.35) 0%,transparent 70%)' }}
       meta={meta}
       otherProjects={otherProjects}
@@ -52,7 +52,7 @@ export default function HealthPlatform() {
           </div>
           <div className="col-md-6">
             <HighlightCard title="視覺層級與行為引導">
-              <p>透過主次按鈕的差異化設計、模組化卡片系統、策略性的留白，建立隱性的導覽線索引導使用者操作。</p>
+              <p>主要按鈕與次要按鈕做出明顯差距，功能收進統一的卡片，再用留白把區塊分開，讓使用者不必讀說明也知道先點哪裡。</p>
             </HighlightCard>
           </div>
           <div className="col-md-6">
@@ -68,8 +68,9 @@ export default function HealthPlatform() {
       </ProjectImageBlock>
 
       <div className="project-section">
-        <h2 className="project-section-title">設計價值</h2>
-        <p>Redesign 不只是「讓介面變好看」，更重要的是重新建立使用者與系統之間的信任關係。<br />這個專案透過系統性的資訊架構重整和認知負擔的降低，讓一個功能複雜的公共平台變得可理解、可操作、可信賴。設計過程中建立的模組化元件系統，也為未來的功能擴充提供了可擴展的基礎。</p>
+        <h2 className="project-section-title">這次 Redesign 改了什麼</h2>
+        <p>原平台把任務、課程、公告、使用者狀態全部堆在同一個畫面上。改版後首頁依序回答三件事：我是誰、現在該做什麼、做完之後會怎樣，其餘資訊往後放。</p>
+        <p>過程中整理出一套可複用的卡片與按鈕元件，之後新增功能可以直接沿用，不必每次重畫。</p>
         <a href="https://hpdcs.hpa.gov.tw/index.aspx" target="_blank" rel="noopener noreferrer" className="project-live-link">
           瀏覽網頁
           <img src={ip('/img/arrow.svg')} alt="" aria-hidden="true" className="project-live-link__icon" />

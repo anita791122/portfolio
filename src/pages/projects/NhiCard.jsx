@@ -24,10 +24,10 @@ export default function NhiCard() {
     >
       <div className="project-section">
         <h2 className="project-section-title">背景與挑戰</h2>
-        <p>虛擬健保卡的使用情境非常特殊 — 使用者通常在身體不適、心理壓力較高的就醫情境下操作。<br />這代表設計必須考量：</p>
+        <p>虛擬健保卡的使用情境很特殊：使用者通常是在身體不適、心理壓力較高的狀態下操作。<br />這代表設計必須考量：</p>
         <ul>
           <li>使用者在高壓情境下的注意力與耐心有限</li>
-          <li>操作流程必須極度簡化，不容許任何額外的認知負擔</li>
+          <li>操作流程要盡量短，多一個步驟都是負擔</li>
           <li>QR Code 身分驗證是核心任務，必須在最短時間內完成</li>
           <li>介面需要傳達安全感與信任感，降低就醫焦慮</li>
         </ul>
@@ -68,8 +68,9 @@ export default function NhiCard() {
       </ProjectImageBlock>
 
       <div className="project-section">
-        <h2 className="project-section-title">設計價值</h2>
-        <p>這個專案的核心不是做出炫目的介面，而是在極端使用情境下提供最大的操作效率與心理安全感。<br />好的設計在這裡意味著「讓使用者幾乎感受不到設計的存在」— 打開 APP、出示 QR Code、完成驗證，整個過程自然到不需要思考。</p>
+        <h2 className="project-section-title">這個專案的判準</h2>
+        <p>使用者身體不舒服、心理壓力高，注意力和耐心都有限。這種情境下衡量設計好壞的標準只有一個：打開 APP 到出示 QR Code 要幾步。</p>
+        <p>所以視覺上我刻意做得安靜——柔和的配色、沒有警示色、插畫而不是照片。介面在這裡不需要被看見，需要的是不擋路。</p>
       </div>
     </ProjectLayout>
   )

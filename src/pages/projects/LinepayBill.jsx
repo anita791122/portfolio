@@ -17,7 +17,7 @@ export default function LinepayBill() {
   return (
     <ProjectLayout
       title="LINE Pay 生活繳費"
-      description="本專案以 LINE Pay 生活繳費情境為核心，針對使用者在低頻但高準確需求的操作流程中，重新梳理介面結構與互動體驗，降低操作時的認知負擔，提升使用效率與安心感。"
+      description="繳費是低頻、但一步都不能錯的任務。這個專案在 LINE App 既有的設計框架下，重整電費、停車費、健保費等多種繳費場景的資訊層級與功能入口。"
       glowStyle={{ background: 'radial-gradient(circle,rgba(0,185,0,0.4) 0%,transparent 70%)' }}
       meta={meta}
       otherProjects={otherProjects}
@@ -44,22 +44,22 @@ export default function LinepayBill() {
         <div className="row g-3">
           <div className="col-md-6">
             <HighlightCard title="使用情境分析與流程優化">
-              <p>深入分析不同繳費場景（電費、停車費、健保費等）的使用頻率與操作路徑，針對性優化高頻流程。</p>
+              <p>比較電費、停車費、健保費等場景的使用頻率與操作路徑，先處理最常被用到的那幾條。</p>
             </HighlightCard>
           </div>
           <div className="col-md-6">
             <HighlightCard title="功能入口層級調整">
-              <p>透過資訊層級的重新梳理，提升繳費功能的可發現性，讓使用者在最短路徑內找到目標功能。</p>
+              <p>重整資訊層級，把繳費入口放到更容易被看見的位置，縮短使用者找到它的路徑。</p>
             </HighlightCard>
           </div>
           <div className="col-md-6">
             <HighlightCard title="視覺模組化設計">
-              <p>採用模組化的視覺元件設計，確保不同繳費類型間的一致性，同時維持品牌整體風格。</p>
+              <p>各種繳費類型共用同一套視覺元件，彼此長得一致，也不脫離 LINE 既有的品牌規範。</p>
             </HighlightCard>
           </div>
           <div className="col-md-6">
             <HighlightCard title="降低認知負擔">
-              <p>重新設計資訊呈現方式，讓使用者在操作過程中不需額外記憶或理解，提升操作信心。</p>
+              <p>重新安排每一步要顯示什麼，讓使用者不必記住上一頁填了什麼才能繼續下一步。</p>
             </HighlightCard>
           </div>
         </div>
@@ -76,8 +76,9 @@ export default function LinepayBill() {
       </ProjectImageBlock>
 
       <div className="project-section">
-        <h2 className="project-section-title">設計價值</h2>
-        <p>本專案展現了在既有產品限制下進行 UX 思考與 UI 優化的能力，在商業產品中取得設計自由度與使用體驗之間的平衡。<br />透過系統性的資訊架構調整和視覺層級優化，讓低頻使用的繳費功能也能提供流暢、安心的操作體驗。</p>
+        <h2 className="project-section-title">這個專案的限制</h2>
+        <p>能動的範圍很窄。功能長在 LINE App 裡面，元件樣式、互動模式與品牌規範都是既定的，我不能為了體驗去改動平台層級的東西。</p>
+        <p>所以真正可以施力的只有兩件事：資訊怎麼排，以及入口放哪裡。這篇講的都是在這兩件事情上做的取捨。</p>
       </div>
     </ProjectLayout>
   )

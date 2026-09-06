@@ -20,14 +20,14 @@ export default function HealthStation() {
   return (
     <ProjectLayout
       title="智慧健康照護站"
-      description="從零打造一套完整的社區健康監測解決方案：整合實體量測機台、跨平台 APP（iOS / Android）與 Web 管理儀表板，建立設計系統確保一致性，以 User Flow 驅動複雜互動邏輯——讓預防醫療真正走入日常生活。"
+      description="一套結合硬體與軟體的社區健康監測系統：實體量測機台、跨平台 APP（iOS／Android）與 Web 管理儀表板三層整合，並以 User Flow 先釐清跨裝置的互動路徑，再進入介面設計。"
       glowStyle={{ background: 'radial-gradient(circle,rgba(123,194,53,0.28) 0%,transparent 70%)' }}
       meta={meta}
       otherProjects={otherProjects}
     >
       <div className="project-section">
         <h2 className="project-section-title">背景與商業脈絡</h2>
-        <p>台灣面臨高齡化浪潮加速，慢性病（高血壓、糖尿病）盛行率持續攀升，但傳統「等生病了再看診」的模式讓醫療體系不堪負荷。政府積極推動社區預防保健，衛生所、社區健康中心等機構有強烈的數位化需求，卻缺乏整合硬體與軟體的完整解決方案。</p>
+        <p>台灣高齡化速度快，高血壓、糖尿病等慢性病盛行率持續上升，而「等生病了再看診」的模式讓醫療體系負擔沉重。政府積極推動社區預防保健，衛生所、社區健康中心等機構有強烈的數位化需求，卻缺乏整合硬體與軟體的完整解決方案。</p>
         <p>對先進醫資而言，這是典型的 <strong>B2G 藍海市場</strong>：政府有預算、有政策支持，但市場上的競品多半只提供單一面向（純硬體量測機 or 純 App 紀錄），缺乏串聯整個照護旅程的系統思維。<strong>智慧健康照護站定位為「全端照護解決方案」</strong>，硬體 + APP + Web + 志工後台一次整合，形成高轉換成本的產品護城河。</p>
         <div className="row g-3 mt-1">
           <div className="col-md-4"><HighlightCard title="市場機會"><p>政府積極採購社區健康監測設備，預防醫療 IoT 市場在高齡化驅動下快速成長</p></HighlightCard></div>
@@ -89,7 +89,7 @@ export default function HealthStation() {
 
       <div className="project-section">
         <h2 className="project-section-title">User Flow：複雜互動邏輯的系統化梳理</h2>
-        <p>這個產品的互動複雜度遠超一般 App——多種登入方式、藍牙設備配對、多角色後台、多指標追蹤。User Flow 是在設計開始前釐清所有路徑的關鍵工具，它讓設計師、PM 與工程師在同一張圖上對齊認知，避免後期遺漏邊緣情境。</p>
+        <p>這個產品的互動比一般 App 複雜得多：多種登入方式、藍牙設備配對、多角色後台、多指標追蹤。User Flow 是在設計開始前釐清所有路徑的關鍵工具，它讓設計師、PM 與工程師在同一張圖上對齊認知，避免後期遺漏邊緣情境。</p>
         <div style={{ marginTop: '1.5rem' }}>
           <div style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', opacity: 0.45, marginBottom: '0.75rem' }}>User Flow</div>
           <GalleryImg src="/img/health-station-flow.webp" alt="智慧健康照護站 User Flow — 完整互動流程圖" />
@@ -101,7 +101,7 @@ export default function HealthStation() {
         <ul>
           <li><strong>數據連續性問題：</strong>使用者若只在覺得不舒服時才量測，歷史趨勢圖就失去預警價值。產品需要「定期量測提醒」機制（Push Notification + 社群激勵），才能確保數據足夠密集，讓機器學習模型或基礎趨勢分析真正有效。</li>
           <li><strong>藍牙 UX 的隱性成本：</strong>設備配對的技術複雜度對中高齡使用者是顯著門檻。未來可考慮提供「影片教學入口」直接嵌入配對流程的失敗畫面，而非只給文字說明，以降低客服量。</li>
-          <li><strong>篩檢量表的醫療邊界：</strong>AD-8 是篩查工具，不是診斷工具。設計上需要非常謹慎地處理結果呈現的措辭——「建議諮詢醫師」而非「您可能有失智症」。</li>
+          <li><strong>篩檢量表的醫療邊界：</strong>AD-8 是篩查工具，不是診斷工具。結果呈現的措辭要很小心：寫「建議諮詢醫師」，不能寫「您可能有失智症」。</li>
           <li><strong>B2G 的驗收邏輯：</strong>政府客戶的採購驗收常以「功能清單」為準，容易讓開發團隊著重功能完整度而非使用者體驗品質。設計師需要在專案早期就建立「易用性標準」並納入驗收條件，否則設計品質容易在後期被壓縮。</li>
         </ul>
         <p className="mt-3">這個專案讓我第一次完整經歷「從零建立設計系統」的過程——Style Guide 不只是顏色表，更是跨平台設計決策的成文化。<strong>一個好的設計系統讓整個團隊能快速決策、降低溝通成本，這是設計師能為產品組織貢獻的長期基礎建設價值。</strong></p>

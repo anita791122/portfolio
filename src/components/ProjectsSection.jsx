@@ -221,7 +221,7 @@ export default function ProjectsSection() {
       <div className="container">
         <div className="mb-5 fade-up">
           <h2 className="section-title">Selected <span className="accent">Projects</span></h2>
-          <p className="section-desc mt-2">每個專案都是一次在限制中尋找最佳解的練習——理解使用者、對齊商業目標、用設計推動產品前進。</p>
+          <p className="section-desc mt-2">每個案子的限制都不一樣：有的卡在平台規範，有的卡在法規，有的卡在只有我一個人。下面寫的是在各自的限制裡做了什麼取捨。</p>
         </div>
 
         <div className="pf-featured-list">

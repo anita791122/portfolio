@@ -88,7 +88,7 @@ export default function Japanese() {
   return (
     <ProjectLayout
       title="日文道場 — Nihongo Dojo"
-      description={<>一個以「讓自學者真的學得下去」為核心命題的 Side Project。<br />透過遊戲化留存機制、完整的學習閉環設計，加上 Material Design 3 沉浸式 UI，<br />從零到一由一人完成設計、開發與發布。</>}
+      description={<>一個以「讓自學者真的學得下去」為核心命題的 Side Project。<br />透過遊戲化留存機制、從學習到驗收的完整循環，加上 Material Design 3 的沉浸式介面，<br />從零到一由一人完成設計、開發與發布。</>}
       glowStyle={{ background: 'radial-gradient(circle,rgba(79,195,247,0.35) 0%,transparent 70%)' }}
       meta={meta}
       otherProjects={otherProjects}

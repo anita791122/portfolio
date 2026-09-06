@@ -18,7 +18,7 @@ export default function Vaccine() {
   return (
     <ProjectLayout
       title="新竹市疫苗預約系統"
-      description="為新竹市民打造高效的疫苗預約公共服務網站，透過資訊架構重整與視覺層級優化，降低首次使用者的認知負擔與操作門檻。"
+      description="疫苗預約網站的使用者涵蓋各個年齡層，多數人只會用一次。這個專案重整資訊架構與視覺層級，讓第一次進站的人也能直接完成預約。"
       glowStyle={{ background: 'radial-gradient(circle,rgba(45,90,142,0.4) 0%,transparent 70%)' }}
       meta={meta}
       otherProjects={otherProjects}
@@ -58,8 +58,8 @@ export default function Vaccine() {
             </HighlightCard>
           </div>
           <div className="col-md-6">
-            <HighlightCard title="客制的視覺設計">
-              <p>公共服務網站強調功能性而非裝飾性，採用客制的視覺風格，確保資訊傳達的準確性與效率。</p>
+            <HighlightCard title="功能優先的視覺設計">
+              <p>公共服務網站的重點是把事情講清楚，不是好看。視覺上不做多餘裝飾，優先確保文字與操作項目一眼可讀。</p>
             </HighlightCard>
           </div>
         </div>
@@ -74,8 +74,9 @@ export default function Vaccine() {
       </ProjectImageBlock>
 
       <div className="project-section">
-        <h2 className="project-section-title">設計價值</h2>
-        <p>公共服務設計的核心是「包容性」— 不能假設所有使用者都熟悉網路操作。<br />這個專案不僅完成了 UI/UX 設計，同時也負責前端切版實作，確保設計意圖能精確還原到最終產品中。<br />從設計到開發的端到端參與，讓我對設計的可行性與工程限制有更深刻的理解。</p>
+        <h2 className="project-section-title">從設計做到切版</h2>
+        <p>公共服務不能假設使用者熟悉網路操作，所以整份設計的判準是「沒用過的人能不能自己完成」。</p>
+        <p>這個案子我從 UX 規劃一路做到前端切版。自己實作的好處是設計稿到畫面之間沒有翻譯落差；代價是會直接撞上技術限制，得當場調整。走完這一遍之後，我對什麼做得到、什麼會很貴，判斷比以前準。</p>
         <a href="https://anita791122.github.io/project_hccg/index.html" target="_blank" rel="noopener noreferrer" className="project-live-link">
           查看實作成果 ↗
           <img src={ip('/img/arrow.svg')} alt="" aria-hidden="true" className="project-live-link__icon" />
