@@ -29,7 +29,7 @@ const featuredProjects = [
     desc: '從 UX 設計到前端實作一手包辦，重新梳理公共衛生資訊架構，讓市民快速完成疫苗預約、查詢與接種站查詢。',
     meta: [
       { label: '角色', value: 'UI/UX + 前端' },
-      { label: '企業', value: '資拓宏宇' },
+      { label: '身分', value: '自由接案' },
       { label: '關鍵挑戰', value: '降低公共系統認知負荷' },
     ],
     reverse: true,

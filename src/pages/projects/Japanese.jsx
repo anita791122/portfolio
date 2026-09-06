@@ -61,6 +61,29 @@ const featureIconStyle = {
   marginTop: '0.1rem',
 }
 
+const ICON_PATHS = {
+  library: <><path d="M4 5.5h4v15H4zM10 5.5h4v15h-4z" /><path d="M16.2 6.6l3.6.9-3.3 13.1-3.6-1z" /></>,
+  cards: <><rect x="6" y="7" width="13" height="14" rx="2" /><path d="M9.5 4h6a2 2 0 0 1 2 2" /><path d="M3.5 9v9a2 2 0 0 0 1.5 1.9" /></>,
+  target: <><circle cx="12" cy="12" r="8.5" /><circle cx="12" cy="12" r="4.5" /></>,
+  link: <><path d="M10 13.5a4 4 0 0 0 5.7.4l2.8-2.8a4 4 0 0 0-5.7-5.7l-1.6 1.6" /><path d="M14 10.5a4 4 0 0 0-5.7-.4l-2.8 2.8a4 4 0 0 0 5.7 5.7l1.6-1.6" /></>,
+  book: <><path d="M12 6.5C10.6 5 8.6 4.2 4 4.2V19c4.6 0 6.6.8 8 2.3 1.4-1.5 3.4-2.3 8-2.3V4.2c-4.6 0-6.6.8-8 2.3z" /><path d="M12 6.5v14.8" /></>,
+  chat: <path d="M21 12a8 8 0 0 1-8 8H8l-4.5 3V12a8 8 0 0 1 8-8h1a8 8 0 0 1 8.5 8z" />,
+  flame: <><path d="M12 2.5c.6 3.2 3 4.4 4.4 6.6A6.6 6.6 0 0 1 12 21.5 6.6 6.6 0 0 1 7.6 9.1C9 6.9 11.4 5.7 12 2.5z" /><path d="M12 21.5a3 3 0 0 1-1.8-5.4c.7-.6 1.5-1.5 1.8-2.8.3 1.3 1.1 2.2 1.8 2.8A3 3 0 0 1 12 21.5z" /></>,
+  bolt: <path d="M13.5 2 5 13.5h5.5L9.5 22 19 10.5h-5.5z" />,
+  heart: <path d="M12 20.7C6.9 17.5 3.5 14.2 3.5 10.4A4.4 4.4 0 0 1 12 8.2a4.4 4.4 0 0 1 8.5 2.2c0 3.8-3.4 7.1-8.5 10.3z" />,
+  sparkle: <><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z" /><path d="M18.5 15.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z" /></>,
+}
+
+function Icon({ name, size = 22 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"
+      style={{ flex: 'none', verticalAlign: '-0.16em' }}>
+      {ICON_PATHS[name]}
+    </svg>
+  )
+}
+
 export default function Japanese() {
   return (
     <ProjectLayout
@@ -154,15 +177,15 @@ export default function Japanese() {
         <p>從 PM 視角出發，每個功能的存在都必須服務於「讓使用者明天還想回來」這個核心目標。以下五大模組各自對應不同的學習階段與留存機制：</p>
         <div style={featureMapStyle}>
           {[
-            { icon: '📚', title: '課程系統', body: '結構化的 N5 學習路徑，含單字、文法、會話三個維度，清楚顯示進度與解鎖狀態，製造「下一關」的驅動感。' },
-            { icon: '🃏', title: '單字卡（Flashcard）', body: '3D 翻牌動效 + 語音朗讀（TTS）。「不記得 / 記得」雙選反饋，模擬間隔記憶邏輯，加速記憶鞏固。' },
-            { icon: '🎯', title: '測驗（Quiz）', body: '四選一選擇題 + 填空輸入雙模式，答題後即時顯示正誤反饋與解釋，搭配愛心系統製造適度緊張感。' },
-            { icon: '🔗', title: '配對遊戲（Matching）', body: '日文 ↔ 中文連連看，答錯時震動動畫 + 扣心機制，讓「失敗成本」成為記憶的錨點。' },
-            { icon: '📖', title: '文法說明', body: '重點句型 + 波浪底線標注 + 多組例句，採台灣日常情境（購物、問路、餐廳），讓語法學習不脫離實用脈絡。' },
-            { icon: '💬', title: '情境會話', body: '分角色的對話場景（A/B 雙角色 + 店員/客人），搭配 TTS 逐句朗讀，模擬真實對話節奏。' },
+            { icon: 'library', title: '課程系統', body: '結構化的 N5 學習路徑，含單字、文法、會話三個維度，清楚顯示進度與解鎖狀態，製造「下一關」的驅動感。' },
+            { icon: 'cards', title: '單字卡（Flashcard）', body: '3D 翻牌動效 + 語音朗讀（TTS）。「不記得 / 記得」雙選反饋，模擬間隔記憶邏輯，加速記憶鞏固。' },
+            { icon: 'target', title: '測驗（Quiz）', body: '四選一選擇題 + 填空輸入雙模式，答題後即時顯示正誤反饋與解釋，搭配愛心系統製造適度緊張感。' },
+            { icon: 'link', title: '配對遊戲（Matching）', body: '日文 ↔ 中文連連看，答錯時震動動畫 + 扣心機制，讓「失敗成本」成為記憶的錨點。' },
+            { icon: 'book', title: '文法說明', body: '重點句型 + 波浪底線標注 + 多組例句，採台灣日常情境（購物、問路、餐廳），讓語法學習不脫離實用脈絡。' },
+            { icon: 'chat', title: '情境會話', body: '分角色的對話場景（A/B 雙角色 + 店員/客人），搭配 TTS 逐句朗讀，模擬真實對話節奏。' },
           ].map(f => (
             <div key={f.title} style={featureItemStyle}>
-              <span style={featureIconStyle}>{f.icon}</span>
+              <span style={featureIconStyle}><Icon name={f.icon} size={24} /></span>
               <div>
                 <h5 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, marginBottom: '0.4rem' }}>{f.title}</h5>
                 <p style={{ fontSize: 'var(--fs-small)', color: 'var(--text-secondary)', lineHeight: 1.7, margin: 0 }}>{f.body}</p>
@@ -177,13 +200,13 @@ export default function Japanese() {
         <p>參考 Duolingo 的核心留存邏輯，並針對「沒有帳號系統的 Side Project」重新設計適合的輕量化版本：</p>
         <div className="row g-3">
           {[
-            { title: '🔥 連勝天數（Streak）', body: '最強的回訪驅動力之一。使用者一旦建立「連勝記錄」，為了「不讓數字歸零」而每天回來的動機遠超過「想學習」本身。這是 Duolingo 留存率的核心支柱之一。' },
-            { title: '⚡ XP 升級系統', body: '每完成一個練習獲得 XP，累積至 500 XP 升級。進度條讓使用者清楚看到「距離下一個里程碑還差多少」，製造 Endowed Progress Effect（已擁有進度捨不得放棄）。' },
-            { title: '❤️ 愛心（Lives）系統', body: '測驗中限制犯錯次數，答錯扣心。適度的失敗成本讓使用者認真作答，避免無腦亂點，也讓「心全部消耗」成為一個自然的回訪觸發點。' },
-            { title: '✨ 即時正向反饋', body: '每次答對顯示 XP 浮動數字動畫（+10 XP），答題完成後呈現「太棒了！」完成頁，搭配正確率、用時、獲得 XP 等統計，讓每次練習都有明確的成就感。' },
+            { id: 'streak', icon: 'flame', title: '連勝天數（Streak）', body: '最強的回訪驅動力之一。使用者一旦建立「連勝記錄」，為了「不讓數字歸零」而每天回來的動機遠超過「想學習」本身。這是 Duolingo 留存率的核心支柱之一。' },
+            { id: 'xp', icon: 'bolt', title: 'XP 升級系統', body: '每完成一個練習獲得 XP，累積至 500 XP 升級。進度條讓使用者清楚看到「距離下一個里程碑還差多少」，製造 Endowed Progress Effect（已擁有進度捨不得放棄）。' },
+            { id: 'hearts', icon: 'heart', title: '愛心（Lives）系統', body: '測驗中限制犯錯次數，答錯扣心。適度的失敗成本讓使用者認真作答，避免無腦亂點，也讓「心全部消耗」成為一個自然的回訪觸發點。' },
+            { id: 'feedback', icon: 'sparkle', title: '即時正向反饋', body: '每次答對顯示 XP 浮動數字動畫（+10 XP），答題完成後呈現「太棒了！」完成頁，搭配正確率、用時、獲得 XP 等統計，讓每次練習都有明確的成就感。' },
           ].map(c => (
-            <div className="col-md-6" key={c.title}>
-              <HighlightCard title={c.title}><p>{c.body}</p></HighlightCard>
+            <div className="col-md-6" key={c.id}>
+              <HighlightCard title={<><Icon name={c.icon} size={20} /> {c.title}</>}><p>{c.body}</p></HighlightCard>
             </div>
           ))}
         </div>
