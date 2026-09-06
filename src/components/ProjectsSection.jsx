@@ -99,10 +99,8 @@ const moreProjects = [
   },
   {
     href: '/projects/event-register',
-    image: null,
-    placeholderStyle: { background: 'linear-gradient(135deg,#0a2a5e 0%,#1a4a8e 50%,#0d3060 100%)', display: 'flex' },
-    placeholderLabel: '一卡通\n振興券登錄',
-    placeholderLabelStyle: { fontSize: '1.4rem', textAlign: 'center', padding: '0 1rem' },
+    image: '/img/event-register-web.jpg',
+    alt: '一卡通振興券活動登錄平台登入畫面',
     tags: ['Web', '金融科技', '政策落地'],
     title: '振興券活動登錄平台',
     desc: '法規合規與 UX 的三方利益協調設計',

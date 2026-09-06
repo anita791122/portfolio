@@ -1,4 +1,4 @@
-import ProjectLayout, { GalleryImg, HighlightCard } from '../../components/ProjectLayout'
+import ProjectLayout, { GalleryImg, ProjectImageBlock, HighlightCard } from '../../components/ProjectLayout'
 import { ip } from '../../utils/imgPath'
 
 const meta = [
@@ -36,6 +36,9 @@ export default function EventRegister() {
         </div>
       </div>
 
+      <ProjectImageBlock>
+        <GalleryImg src="/img/event-register-web.jpg" alt="一卡通振興券登錄平台——桌機版登入畫面，表單僅保留身分證號與手機門號兩個欄位" />
+      </ProjectImageBlock>
       <div className="project-section">
         <h2 className="project-section-title">問題定義：這個頁面的設計難點在哪？</h2>
         <p>表面上這只是一個「填資料、按登入」的簡單頁面，但背後有幾個相互競爭的設計張力：</p>
@@ -53,6 +56,9 @@ export default function EventRegister() {
         </div>
       </div>
 
+      <ProjectImageBlock>
+        <GalleryImg src="/img/event-register-terms.jpg" alt="活動注意事項彈窗——綁定期程、消費門檻、不適用項目與客服專線等法規揭露內容" />
+      </ProjectImageBlock>
       <div className="project-section">
         <h2 className="project-section-title">設計決策與 PM 思維</h2>
         <div className="row g-3">
@@ -72,6 +78,9 @@ export default function EventRegister() {
         </div>
       </div>
 
+      <ProjectImageBlock>
+        <GalleryImg src="/img/event-register-mobile.jpg" alt="手機版畫面——卡片改為滿版單欄，兩個欄位與主按鈕維持相同的視覺層級" />
+      </ProjectImageBlock>
       <div className="project-section">
         <h2 className="project-section-title">設計反思與延伸思考</h2>
         <p>如果重新設計這個頁面，從 PM 角度會考慮以下改進方向：</p>
