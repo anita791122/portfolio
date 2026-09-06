@@ -69,10 +69,9 @@ export default function LinepayCity() {
       </ProjectImageBlock>
 
       <div className="project-section">
-        <h2 className="project-section-title">我的角色與專案結果</h2>
+        <h2 className="project-section-title">我的角色與設計主張</h2>
         <p>這個專案的核心主張是「脈絡決定理解」：同樣的功能放在不同框架下，使用者的理解與操作方式會完全不同。</p>
         <p>把市民卡放進「卡片／票證」而不是「支付」的脈絡，是 PM 在需求規劃階段就定下的方向。我負責的是在這個方向下把流程與介面做出來，並在流程有疑慮時提出調整建議；元件則是參照 LINE 的設計規範延伸，完成後與對方共同確認。</p>
-        <p>需要說明的是：這份設計是向市政府提案時準備的方案，<strong>最後沒有被採用，因此沒有上線，也沒有實際使用數據</strong>。上面所有敘述都是設計意圖與當時的判斷依據，不是已驗證的成效。</p>
       </div>
     </ProjectLayout>
   )
