@@ -2027,3 +2027,34 @@ img {
     align-items: flex-start;
   }
 }
+/* Work Experience — 條列式敘述 */
+.exp-points {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+}
+
+.exp-points li {
+  position: relative;
+  padding-left: 1.1rem;
+  margin-bottom: 0.45rem;
+  font-size: var(--fs-caption);
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+.exp-points li:last-child {
+  margin-bottom: 0;
+}
+
+.exp-points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.65;
+}

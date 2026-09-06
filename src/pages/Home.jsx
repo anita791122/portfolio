@@ -6,6 +6,7 @@ import AboutSection from '../components/AboutSection'
 import ExperienceSection from '../components/ExperienceSection'
 import ServicesSection from '../components/ServicesSection'
 import ContactSection from '../components/ContactSection'
+import Footer from '../components/Footer'
 
 export default function Home() {
   const location = useLocation()
@@ -29,6 +30,7 @@ export default function Home() {
       <ExperienceSection />
       <ServicesSection />
       <ContactSection />
+      <Footer />
     </>
   )
 }
