@@ -225,6 +225,14 @@ export default function Japanese() {
       </div>
 
       <div className="project-section">
+        <h2 className="project-section-title">實際用下來，哪一個機制有效</h2>
+        <p>我是這個產品唯一的使用者，所以下面是第一手觀察，但樣本只有一個。</p>
+        <p><strong>連勝天數</strong>有效。它確實讓我為了不讓數字歸零而打開 App，那個動機比「我想學日文」本身還強，跟我設計時的假設一致。</p>
+        <p><strong>愛心扣血</strong>沒有用，而且是反效果。答錯扣心在測驗當下製造的不是專注，是挫敗。真的要改版，我會把它拿掉。</p>
+        <p>我當初是把 Duolingo 的三個機制一起搬過來的，實際用下來才發現它們的效果差很多——同樣是遊戲化，有的推我往前，有的只是讓我不想再點下一題。</p>
+      </div>
+
+      <div className="project-section">
         <h2 className="project-section-title">頁面預覽</h2>
         <p>以下為各主要功能畫面的實際樣式，採 Material Design 3 Dark Theme，完整響應式支援手機、平板、桌機三種排版。</p>
         <div className="browser-frame">
@@ -269,8 +277,15 @@ export default function Japanese() {
       </div>
 
       <div className="project-section">
+        <h2 className="project-section-title">為什麼停在這裡</h2>
+        <p>這個 App 的課程內容是跟著我實際在上的日文課走的，頁面上那兩課的日期就是上課日。課程暫停之後沒有新內容可以加，網站也就停在那裡。</p>
+        <p>所以「沒有繼續更新」的原因很單純：這個工具的內容來源暫停了。</p>
+        <p>不過現在回頭看，課程資料是直接寫在程式碼裡的，跟著課一課一課長出來，內容和程式沒有分開。如果當初把它們拆開，就算課停了，我也還能自己往裡面補內容。</p>
+      </div>
+
+      <div className="project-section">
         <h2 className="project-section-title">反思：如果這是一個真實產品，接下來要做什麼？</h2>
-        <p>以 PM 視角來看，目前的版本是一個功能完整的 MVP（Minimum Viable Product）。如果要往「真正的產品」演進，我會優先做以下三件事：</p>
+        <p>目前的版本是一個功能完整的 MVP（Minimum Viable Product），而且從頭到尾只有我一個使用者驗證過。如果要往真正的產品走，我會優先做這三件事：</p>
         <ul>
           <li><strong>建立帳號系統 + 雲端進度同步</strong>：目前進度存在 localStorage，換裝置即消失。Streak 的留存力量必須跨裝置才能真正生效。</li>
           <li><strong>導入分析儀表板</strong>：追蹤「哪些單字答錯率最高」「使用者在哪個步驟流失」，以數據驅動課程內容迭代，而非憑感覺新增教材。</li>
@@ -278,7 +293,7 @@ export default function Japanese() {
         </ul>
         <div className="row g-3 mt-2">
           {[
-            { title: 'PM Takeaway #1', body: '遊戲化不是「加點數就好」，需要理解每個機制背後的心理學原理，才能設計出真正有效的留存工具。' },
+            { title: 'PM Takeaway #1', body: '抄機制比抄理由容易。我一次搬進三個遊戲化機制，但沒有分別問「這一個在我的情境下還成立嗎」，結果其中一個不只沒幫上忙，反而讓我更不想練。' },
             { title: 'PM Takeaway #2', body: '「設計者即使用者」的 Side Project 雖然驗證成本最低，但也最容易陷入個人偏見；真正的 PM 工作需要超越自己的使用情境去思考。' },
             { title: 'PM Takeaway #3', body: '從零到一獨力完成讓我深刻理解「設計可行性」：哪些互動效果在純 CSS 實現時有技術天花板，哪些需要 JS 支援，影響後續與工程師溝通的精準度。' },
           ].map(c => (
