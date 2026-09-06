@@ -1,4 +1,4 @@
-import ProjectLayout from '../../components/ProjectLayout'
+import ProjectLayout, { GalleryImg, ProjectImageBlock } from '../../components/ProjectLayout'
 
 const meta = [
   { label: '角色', value: '產品設計師' },
@@ -109,6 +109,10 @@ export default function LondonimgSystem() {
         </div>
       </div>
 
+      <ProjectImageBlock>
+        <GalleryImg src="/img/londonimg-guide-blocks.jpg" alt="線上使用手冊的積木總覽頁：左側是 13 種積木的子選單，右側逐一列出每塊積木的呈現樣式與「看填空語法」入口" />
+      </ProjectImageBlock>
+
       <div className="project-section">
         <h2 className="project-section-title">幾個關鍵取捨</h2>
 
@@ -138,6 +142,10 @@ export default function LondonimgSystem() {
           <p style={{ ...cardBody, marginTop: '0.75rem' }}>寫在文件裡的規則只有讀過的人會遵守；寫進工具裡的規則，每一次產出都會被套用。</p>
         </Tradeoff>
       </div>
+
+      <ProjectImageBlock>
+        <GalleryImg src="/img/londonimg-guide-block.jpg" alt="單一積木的說明頁：白話註解、兩種版型的差異、實際預覽，以及可一鍵複製的填空語法" />
+      </ProjectImageBlock>
 
       <div className="project-section">
         <h2 className="project-section-title">順帶攔下的一個商業風險</h2>

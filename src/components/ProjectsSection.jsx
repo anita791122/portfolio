@@ -6,9 +6,7 @@ import { ip } from '../utils/imgPath'
 const featuredProjects = [
   {
     href: '/projects/londonimg-system',
-    image: null,
-    placeholderStyle: { background: 'linear-gradient(135deg,#3b2d5c 0%,#221a38 60%,#15101f 100%)' },
-    placeholderLabel: '13 積木\n× AI 內容工具',
+    image: '/img/londonimg-guide-overview.jpg',
     alt: '倫敦印象商品頁模組化系統與 AI 內容工具',
     tags: ['內部工具', '設計系統', 'AI 工作流'],
     title: '讓不懂語法的同事自己做出商品頁',
