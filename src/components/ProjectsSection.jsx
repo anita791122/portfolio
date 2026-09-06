@@ -67,9 +67,8 @@ const featuredProjects = [
 const moreProjects = [
   {
     href: '/projects/ehis-redesign',
-    image: null,
-    placeholderStyle: { background: 'linear-gradient(135deg,#1a4a6e 0%,#0d2d45 100%)' },
-    placeholderLabel: 'eHIS',
+    image: '/img/web-SOAP2.jpg',
+    alt: 'eHIS 看診介面優化後——關鍵資訊單一視窗全覽',
     tags: ['Web System', '醫療資訊'],
     title: 'eHIS 醫療系統優化',
     desc: '重構看診介面，實現零捲動工作流',
@@ -92,10 +91,8 @@ const moreProjects = [
   },
   {
     href: '/projects/health-station',
-    image: null,
-    placeholderStyle: { background: 'linear-gradient(135deg,#0a3d20 0%,#166534 50%,#14532d 100%)', display: 'flex' },
-    placeholderLabel: '智慧健康\n照護站',
-    placeholderLabelStyle: { fontSize: '1.4rem', textAlign: 'center', padding: '0 1rem' },
+    image: '/img/health-station-web1.webp',
+    alt: '享健康智慧照護站——社區量測機台介面',
     tags: ['Web UI', '醫療科技', 'IoT'],
     title: '智慧健康照護站',
     desc: '打通社區量測機台到志工服務的完整照護旅程',
@@ -120,10 +117,8 @@ const moreProjects = [
   },
   {
     href: '/projects/japanese',
-    image: null,
-    placeholderStyle: { background: 'linear-gradient(135deg,#003549 0%,#004D67 50%,#0F1316 100%)', display: 'flex' },
-    placeholderLabel: '🥋 日文道場',
-    placeholderLabelStyle: { fontSize: '1.4rem', textAlign: 'center', padding: '0 1rem' },
+    image: '/img/japanese-home.jpg',
+    alt: '日文道場首頁——連勝天數、XP 與愛心等留存機制',
     tags: ['Side Project', 'PM × 前端'],
     title: '日文道場',
     desc: '用遊戲化留存機制解決自學者流失問題，一人完成設計、開發與上線',
