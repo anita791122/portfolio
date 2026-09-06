@@ -17,13 +17,14 @@ export default function LinepayCity() {
   return (
     <ProjectLayout
       title="LINE Pay 市民卡"
-      description="將實體市民卡數位化，以「卡片/票證」脈絡取代支付流程思維，讓使用者直覺辨識為身分證件而非金融工具，降低操作錯誤，提升在時間緊迫場景下的使用效率。"
+      description="將實體市民卡數位化的提案設計。設計方向是以「卡片／票證」脈絡取代支付流程思維，目標是讓使用者直覺辨識為身分證件而非金融工具，降低在時間緊迫場景下的操作錯誤。"
       glowStyle={{ background: 'radial-gradient(circle,rgba(0,185,0,0.35) 0%,transparent 70%)' }}
       meta={meta}
       otherProjects={otherProjects}
     >
       <div className="project-section">
         <h2 className="project-section-title">背景與挑戰</h2>
+        <p>當時已有部分縣市推出虛擬市民卡。公司評估後決定把這項服務納入自家產品線，並準備向市政府提案，這份設計就是提案的一部分。</p>
         <p>傳統市民卡在實體或早期數位化的脈絡下存在明顯的使用痛點：</p>
         <ul>
           <li>使用者需隨身攜帶實體卡片，遺失或忘帶的成本高</li>
@@ -42,7 +43,7 @@ export default function LinepayCity() {
         <div className="row g-3">
           <div className="col-md-6">
             <HighlightCard title="卡片脈絡的功能入口">
-              <p>將市民卡放在「卡片/票證」的脈絡中而非支付流程內，讓使用者直覺認知為身分證件，降低操作錯誤率。</p>
+              <p>將市民卡放在「卡片／票證」的脈絡中而非支付流程內，讓使用者直覺認知為身分證件，以降低操作錯誤為目標。</p>
             </HighlightCard>
           </div>
           <div className="col-md-6">
@@ -68,8 +69,10 @@ export default function LinepayCity() {
       </ProjectImageBlock>
 
       <div className="project-section">
-        <h2 className="project-section-title">設計價值</h2>
-        <p>這個專案的核心思維是「脈絡決定理解」— 同樣的功能放在不同的框架下，使用者的理解和操作方式會完全不同。<br />透過將市民卡從「支付工具」重新定位為「身分票證」，大幅降低了使用者的心智模型切換成本，讓數位化不只是把實體卡搬到手機上，而是真正改善了使用體驗。</p>
+        <h2 className="project-section-title">我的角色與專案結果</h2>
+        <p>這個專案的核心主張是「脈絡決定理解」：同樣的功能放在不同框架下，使用者的理解與操作方式會完全不同。</p>
+        <p>把市民卡放進「卡片／票證」而不是「支付」的脈絡，是 PM 在需求規劃階段就定下的方向。我負責的是在這個方向下把流程與介面做出來，並在流程有疑慮時提出調整建議；元件則是參照 LINE 的設計規範延伸，完成後與對方共同確認。</p>
+        <p>需要說明的是：這份設計是向市政府提案時準備的方案，<strong>最後沒有被採用，因此沒有上線，也沒有實際使用數據</strong>。上面所有敘述都是設計意圖與當時的判斷依據，不是已驗證的成效。</p>
       </div>
     </ProjectLayout>
   )
