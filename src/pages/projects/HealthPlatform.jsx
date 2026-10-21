@@ -57,7 +57,7 @@ export default function HealthPlatform() {
           </div>
           <div className="col-md-6">
             <HighlightCard title="專業且親和的視覺風格">
-              <p>色彩調性朝向健康、安心、穩定的方向精煉，移除裝飾性元素，建立可複用的設計模式並保持結構彈性。</p>
+              <p>色彩調性朝向健康、安心、穩定的方向精煉，移除裝飾性元素，建立可重複使用的設計模式並保持結構彈性。</p>
             </HighlightCard>
           </div>
         </div>
@@ -70,7 +70,7 @@ export default function HealthPlatform() {
       <div className="project-section">
         <h2 className="project-section-title">這次 Redesign 改了什麼</h2>
         <p>原平台把任務、課程、公告、使用者狀態全部堆在同一個畫面上。改版後首頁依序回答三件事：我是誰、現在該做什麼、做完之後會怎樣，其餘資訊往後放。</p>
-        <p>過程中整理出一套可複用的卡片與按鈕元件，之後新增功能可以直接沿用，不必每次重畫。</p>
+        <p>過程中整理出一套可重複使用的卡片與按鈕元件，之後新增功能可以直接沿用，不必每次重畫。</p>
         <a href="https://hpdcs.hpa.gov.tw/index.aspx" target="_blank" rel="noopener noreferrer" className="project-live-link">
           瀏覽網頁
           <img src={ip('/img/arrow.svg')} alt="" aria-hidden="true" className="project-live-link__icon" />

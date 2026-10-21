@@ -38,7 +38,7 @@ export default function LondonimgSystem() {
   return (
     <ProjectLayout
       title="讓不懂語法的同事自己做出商品頁"
-      description="一個人要顧 350 個商品頁，真正的瓶頸是產能。我把商品頁拆成 13 種可複用積木，配一本線上手冊和一套同事可自行安裝的 AI 內容工具，讓沒有設計背景的人也能產出符合規格的頁面，並在工具裡內建護欄，避免 AI 產出不實宣稱。"
+      description="一個人要顧 350 個商品頁，真正的瓶頸是產能。我把商品頁拆成 13 種可重複使用的積木，配一本線上手冊和一套同事可自行安裝的 AI 內容工具，讓沒有設計背景的人也能產出符合規格的頁面，並在工具裡內建護欄，避免 AI 產出不實宣稱。"
       glowStyle={{ background: 'radial-gradient(circle,rgba(180,160,212,0.35) 0%,transparent 70%)' }}
       meta={meta}
       otherProjects={otherProjects}
@@ -90,7 +90,7 @@ export default function LondonimgSystem() {
         <div className="row g-3 mt-1">
           <div className="col-md-4">
             <div style={card.neutral}>
-              <h4 style={cardTitle}>13 種可複用積木</h4>
+              <h4 style={cardTitle}>13 種可重複使用的積木</h4>
               <p style={cardBody}>Hero（有／無品牌兩版）、重點 icon 列、影音、特色區、情境橫圖壓文（兩版）、棋盤格（兩版）、多圖橫移（三版）、版本比較、加價購、收尾 CTA、規格、QA、SNS。</p>
             </div>
           </div>
@@ -117,7 +117,7 @@ export default function LondonimgSystem() {
         <h2 className="project-section-title">幾個關鍵取捨</h2>
 
         <Tradeoff n="01" title="不重做版型">
-          <p style={cardBody}>最容易走的路是「這頁很糟，重做一版」。但我比對過既有的 v3 版型後判斷：13 積木本身就是可用的模板，缺的不是新設計，是組合商品專屬的那幾件事。所以我沒有重做，只補缺口。</p>
+          <p style={cardBody}>最容易走的路是「這頁很糟，重做一版」。但我比對過自己先前做的 v3 版型後判斷：13 積木本身就是可用的模板，缺的不是新設計，是組合商品專屬的那幾件事。所以我沒有重做，只補缺口。</p>
           <p style={{ ...cardBody, marginTop: '0.75rem' }}>抗拒重做的誘惑，把力氣放在最小改動能拿到的最大槓桿。</p>
         </Tradeoff>
 

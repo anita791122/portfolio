@@ -56,7 +56,7 @@ export default function AboutSection() {
             <p className="about-body">
               我習慣在限制中找到最佳解。<br />既有平台的設計框架、跨部門的利益協調、技術可行性的取捨，這些限制通常不會消失，能決定的是在裡面選哪一條路。我的判準是：這個設計最後做不做得出來、有沒有人真的在用。
             </p>
-            <p className="about-body">同時，我也具備部分前端開發能力（HTML/CSS/Bootstrap），能夠自己將設計從 Figma 到瀏覽器走完全程，這讓我在與工程師溝通時更能理解技術限制，降低來回成本。</p>
+            <p className="about-body">同時，我也能用 HTML/CSS/Bootstrap 切版，自己把設計從 Figma 做到瀏覽器上，這讓我在與工程師溝通時更能理解技術限制，降低來回成本。</p>
           </div>
         </div>
 
