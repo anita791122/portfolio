@@ -148,18 +148,12 @@ export default function LondonimgSystem() {
       </ProjectImageBlock>
 
       <div className="project-section">
-        <h2 className="project-section-title">順帶攔下的一個商業風險</h2>
-        <p>做內容盤點時查到一個定價問題：組合包頁面標示的原價是三件商品「原價」相加得出的 1,870 元，但消費者自己點進三個單品頁看到的現價相加是 1,470 元。頁面暗示省了 871 元，實際查得到的只有 471 元。</p>
-        <p>定價不在我的權責範圍，所以我把它標成需要決策的項目往上報，沒有自己改掉。</p>
-      </div>
-
-      <div className="project-section">
         <h2 className="project-section-title">學到的事</h2>
         <div style={tradeoffWrap}>
           <p style={cardBody}>先問「這個東西<strong>存在</strong>嗎」，再問「這個東西好不好」。我花了不少時間在版面細節上，後來才發現整頁對搜尋引擎與 AI 是空的。可讀性應該排在美感前面。</p>
         </div>
         <div style={tradeoffWrap}>
-          <p style={cardBody}>誠實說明<strong>效益的邊界</strong>。這一輪的成果不是轉換率提升，我也沒有這樣報。它是產能與可檢索性：同事能自己做頁面了，頁面開始有內容能被讀到。老闆要的是可以驗證的東西，不是好聽的預測。</p>
+          <p style={cardBody}>誠實說明<strong>效益的邊界</strong>。這一輪的成果不是轉換率提升，我也沒有這樣報。它是產能與可檢索性：頁面開始有內容能被讀到。老闆要的是可以驗證的東西，不是好聽的預測。</p>
         </div>
         <div style={tradeoffWrap}>
           <p style={cardBody}>我和 AI 的<strong>量測也會錯</strong>。初次測量描述區高度時低估了，因為 lazy load 的佔位圖是正方形，真實原圖是直式，換算後才正確。發現後直接在文件裡更正，沒有默默改掉。</p>
