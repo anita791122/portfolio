@@ -4,7 +4,7 @@ import { useFadeUp } from '../hooks/useFadeUp'
 const workExperience = [
   {
     company: '倫敦印象企業社',
-    role: 'UI/UX、網頁設計師',
+    role: '產品設計師（UI/UX）',
     date: '2026.05 — 現在',
     points: [
       '設計商品頁的模組化積木與版型，帶 AI 實作 HTML 與線上使用手冊，目標是讓沒有設計背景的同事也能自己組出符合規格的頁面',

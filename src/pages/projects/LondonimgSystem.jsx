@@ -1,7 +1,7 @@
 import ProjectLayout, { GalleryImg, ProjectImageBlock } from '../../components/ProjectLayout'
 
 const meta = [
-  { label: '角色', value: '產品設計師' },
+  { label: '角色', value: '產品設計師（UI/UX）' },
   { label: '企業', value: '倫敦印象' },
   { label: '類型', value: '內部工具 / 設計系統 / AI 工作流' },
   { label: '使用者', value: '不懂語法的同事' },
