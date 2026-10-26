@@ -8,9 +8,9 @@ const meta = [
 ]
 
 const otherProjects = [
-  { href: '/projects/ehis-redesign', title: 'eHIS 醫療系統優化', desc: 'Web System — UI/UX — 醫療資訊' },
-  { href: '/projects/japanese', title: '日文道場', desc: 'Side Project — PM × 前端' },
-  { href: '/projects/vaccine', title: '新竹市疫苗預約系統', desc: 'Web — UI/UX + 前端 — 公共服務' },
+  { href: '/projects/ehis-redesign', title: 'eHIS 看診介面改版', desc: 'Web System｜UI/UX｜醫療資訊' },
+  { href: '/projects/japanese', title: '日文道場', desc: 'Side Project｜PM × 前端' },
+  { href: '/projects/vaccine', title: '新竹市疫苗預約系統', desc: 'Web｜UI/UX + 前端切版｜公共服務' },
 ]
 
 const card = {
@@ -38,7 +38,7 @@ export default function LondonimgSystem() {
   return (
     <ProjectLayout
       title="設計一套不懂語法的同事也能用的商品頁系統"
-      description="一個人要顧全站的商品頁，真正的瓶頸是產能。我把商品頁拆成可重複使用的積木，配上線上手冊和一套同事可自行安裝的 AI 內容工具，目標是讓沒有設計背景的人也能產出符合規格的頁面。工具裡的護欄規則由我訂定，避免 AI 產出不實宣稱。"
+      description="一個人要顧全站的商品頁，卡住的是產能。我把商品頁拆成可重複使用的積木，配上線上手冊和一套同事可自行安裝的 AI 內容工具（HTML 與工具由 AI 實作），目標是讓沒有設計背景的人也能產出符合規格的頁面。工具裡的護欄規則由我訂定，降低 AI 產出不實宣稱的風險。"
       glowStyle={{ background: 'radial-gradient(circle,rgba(180,160,212,0.35) 0%,transparent 70%)' }}
       meta={meta}
       otherProjects={otherProjects}
@@ -72,12 +72,12 @@ export default function LondonimgSystem() {
           </div>
         </div>
         <p className="mt-4">也就是說，這一頁對搜尋引擎與 AI 來說幾乎不存在。同時 GA4 顯示：加購行為多數發生在商品頁，但客人平均只看到頁面上方一小段，加購最多的商品也很少人滑到底。</p>
-        <p>兩件事合起來的結論是：把心力放在「頁面下半部做得更精緻」是錯的方向。真正的問題有兩個：內容產不出來，產出來也讀不到。</p>
+        <p>兩件事合起來的結論是：把心力放在「頁面下半部做得更精緻」是錯的方向。問題其實有兩個：內容產不出來，產出來也讀不到。</p>
       </div>
 
       <div className="project-section">
-        <h2 className="project-section-title">真正的使用者是同事，不是消費者</h2>
-        <p>這個專案真正的使用者是公司裡不懂語法的同事。他們要能自己上架，我不可能是每一頁的瓶頸。</p>
+        <h2 className="project-section-title">使用者是同事，不是消費者</h2>
+        <p>這個專案的使用者是公司裡不懂語法的同事。他們要能自己上架，我不可能是每一頁的瓶頸。</p>
         <p>這改變了設計目標：要做的是一套「別人照著做也不會做壞」的系統。</p>
         <div style={callout}>
           <div style={eyebrow('var(--accent)')}>平台限制</div>
@@ -87,6 +87,7 @@ export default function LondonimgSystem() {
 
       <div className="project-section">
         <h2 className="project-section-title">做了什麼</h2>
+        <p>積木的設計和版型是我做的；HTML、手冊網頁和工具的程式由 AI 實作，我訂規格、驗收。</p>
         <div className="row g-3 mt-1">
           <div className="col-md-4">
             <div style={card.neutral}>
@@ -114,11 +115,10 @@ export default function LondonimgSystem() {
       </ProjectImageBlock>
 
       <div className="project-section">
-        <h2 className="project-section-title">幾個關鍵取捨</h2>
+        <h2 className="project-section-title">幾個取捨</h2>
 
         <Tradeoff n="01" title="不重做版型">
           <p style={cardBody}>最容易走的路是「這頁很糟，重做一版」。但我比對過自己先前做的 v3 版型後判斷：這套積木本身就是可用的模板，缺的不是新設計，是組合商品專屬的那幾件事。所以我沒有重做，只補缺口。</p>
-          <p style={{ ...cardBody, marginTop: '0.75rem' }}>抗拒重做的誘惑，把力氣放在最小改動能拿到的最大槓桿。</p>
         </Tradeoff>
 
         <Tradeoff n="02" title="版本比較不做 HTML 表格">
@@ -129,17 +129,17 @@ export default function LondonimgSystem() {
         <Tradeoff n="03" title="決定不做 FAQ schema">
           <p style={cardBody}>原本規劃要為 QA 區塊補上 FAQPage 結構化資料。實際去查線上頁之後發現三件事：SHOPLINE 主題已經自動輸出 Product、Offer、Breadcrumb 三種結構化資料；FAQ 沒有乾淨的掛載點；而 Google 對 FAQ 複合式搜尋結果多半已經停用。</p>
           <p style={{ ...cardBody, marginTop: '0.75rem' }}>所以我把它拿掉了，工具只產可見的 QA 文字，不產 JSON-LD，並在手冊裡直接寫「這塊同事不用碰」。</p>
-          <p style={{ ...cardBody, marginTop: '0.75rem' }}>做一件看起來很專業、但實際上沒有效益的事，成本不只是白做，是讓每個同事之後都要多維護一段沒有用的東西。</p>
+          <p style={{ ...cardBody, marginTop: '0.75rem' }}>做一件看起來很專業、但沒有效益的事，除了白做，每個同事之後還要多維護一段用不到的語法。</p>
         </Tradeoff>
 
         <Tradeoff n="04" title="最值錢的那句話不放在商品描述">
-          <p style={cardBody}>GA4 顯示加購發生在商品頁，但客人平均沒往下滑多少。所以組合商品「為什麼是這三件」這句最關鍵的話，我放在購買區上方的商品摘要欄，而不是往下捲才看得到的商品描述欄。</p>
+          <p style={cardBody}>GA4 顯示加購發生在商品頁，但客人平均沒往下滑多少。所以組合商品「為什麼是這三件」這句最重要的話，我放在購買區上方的商品摘要欄，不放在要往下捲才看得到的商品描述欄。</p>
         </Tradeoff>
 
-        <Tradeoff n="05" title="把護欄寫進工具，而不是寫在文件裡">
+        <Tradeoff n="05" title="護欄寫進工具裡">
           <p style={cardBody}>代理品牌的電商賣的是別人的東西，一句寫過頭的宣稱就可能變成不實廣告。讓非專業使用者用 AI 產文案，這個風險會被放大。</p>
           <p style={{ ...cardBody, marginTop: '0.75rem' }}>所以我訂了規則，由 AI 寫進工具本身：身分只能寫「授權經銷商」，不能宣稱代言、官方或獨家；認證數字必須有官方出處且屬實才能引用；不照抄、改寫、翻譯或仿寫競品文案。公司原本就規定情境圖禁止 AI 生成、只能 AI 修圖，這條也一起寫進工具，因為賣的是實體商品，假圖會誤導。</p>
-          <p style={{ ...cardBody, marginTop: '0.75rem' }}>寫在文件裡的規則只有讀過的人會遵守；寫進工具裡的規則，每一次產出都會被套用。</p>
+          <p style={{ ...cardBody, marginTop: '0.75rem' }}>寫在文件裡的規則只有讀過的人會遵守；寫進工具裡的規則，每次產出時都會帶進去。</p>
         </Tradeoff>
       </div>
 
@@ -153,7 +153,7 @@ export default function LondonimgSystem() {
           <p style={cardBody}>先問「這個東西<strong>存在</strong>嗎」，再問「這個東西好不好」。我花了不少時間在版面細節上，後來才發現整頁對搜尋引擎與 AI 是空的。可讀性應該排在美感前面。</p>
         </div>
         <div style={tradeoffWrap}>
-          <p style={cardBody}>誠實說明<strong>效益的邊界</strong>。這一輪的成果不是轉換率提升，我也沒有這樣報。它是產能與可檢索性：頁面開始有內容能被讀到。老闆要的是可以驗證的東西，不是好聽的預測。</p>
+          <p style={cardBody}>誠實說明<strong>效益的邊界</strong>。這一輪的成果不是轉換率提升，我也沒有這樣報。它是產能與可檢索性：十月交出初版的商品上架工具（由 AI 實作），同事已經直接在用；部分商品描述也開始有文字能被讀到。老闆要的是可以驗證的東西。</p>
         </div>
         <div style={tradeoffWrap}>
           <p style={cardBody}>我和 AI 的<strong>量測也會錯</strong>。初次測量描述區高度時低估了，因為 lazy load 的佔位圖是正方形，真實原圖是直式，換算後才正確。發現後直接在文件裡更正，沒有默默改掉。</p>
