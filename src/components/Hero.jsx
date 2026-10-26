@@ -61,7 +61,7 @@ export default function Hero() {
       <div className="container position-relative" style={{ zIndex: 2 }}>
         <div className="row align-items-center">
           <div className="col-lg-7">
-            <p className="hero-tag mb-3 hero-animate">UI/UX Designer &amp; Web Designer</p>
+            <p className="hero-tag mb-3 hero-animate">Product Designer｜UI/UX</p>
             <h2 className="hero-title mb-4 hero-animate">
               以使用者為核心<br />
               <span className="accent">以商業目標為導向</span><br />
