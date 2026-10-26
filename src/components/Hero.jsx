@@ -63,8 +63,8 @@ export default function Hero() {
           <div className="col-lg-7">
             <p className="hero-tag mb-3 hero-animate">Product Designer｜UI/UX</p>
             <h2 className="hero-title mb-4 hero-animate">
-              在別人訂好的規則裡，<br />
-              <span className="accent">找出還能動的那幾格</span>
+              <span style={{ display: 'inline-block' }}>在別人訂好的</span><span style={{ display: 'inline-block' }}>規則裡，</span><br />
+              <span className="accent"><span style={{ display: 'inline-block' }}>找出還能動的</span><span style={{ display: 'inline-block' }}>那幾格</span></span>
             </h2>
             <p className="hero-subtitle mb-4 hero-animate" style={{ maxWidth: '680px' }}>
               產品設計師，10 年以上跨產業設計經驗。<br />
