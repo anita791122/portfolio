@@ -115,9 +115,8 @@ export default function EhisRedesign() {
       </div>
 
       <div className="project-section">
-        <h2 className="project-section-title">改版重點</h2>
+        <h2 className="project-section-title">回顧</h2>
         <div style={{ ...pmCallout, marginTop: '1.5rem' }}>
-          <div style={{ fontFamily: 'var(--font-display)', fontSize: '1rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--accent)', marginBottom: '0.5rem' }}>回顧</div>
           <p style={{ fontSize: 'var(--fs-small)', color: 'var(--text-secondary)', lineHeight: 1.75, margin: 0 }}>醫療資訊系統的設計限制比消費性產品嚴格：系統需求複雜、利害關係人多、改動成本高。<br />這個案例讓我學會：不從零重做，先找出最卡的三個問題，只處理那三個。</p>
         </div>
       </div>
