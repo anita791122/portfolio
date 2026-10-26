@@ -1,7 +1,7 @@
 import ProjectLayout, { GalleryImg, HighlightCard } from '../../components/ProjectLayout'
 
 const meta = [
-  { label: '角色', value: 'UI/UX Designer' },
+  { label: '角色', value: 'UI/UX 設計師' },
   { label: '企業', value: '資拓宏宇' },
   { label: '系統類型', value: '電子病歷系統' },
   { label: '使用者', value: '醫師 / 護理師' },
@@ -87,9 +87,9 @@ export default function EhisRedesign() {
         <div className="row g-3 mt-1">
           {[
             { num: 'Strategy 01', title: '精簡患者資訊', body: '從「全部顯示」改為「看診確認所需」。保留姓名、身分證號、性別，以及身高、BMI、血壓、體重、體溫、脈搏等生理數值，移除在看診當下非必要的完整地址、電話等資訊，減少視覺雜訊。' },
-            { num: 'Strategy 02', title: '按鈕重要性分級', body: '將六個同等視覺權重的按鈕，依使用頻率與重要性重新分級：常用的功能用主要按鈕，其他功能降成次要按鈕。' },
+            { num: 'Strategy 02', title: '按鈕重要性分級', body: '將六個同等視覺權重的按鈕，依重要性重新分級：常用的功能用主要按鈕，其他功能降成次要按鈕。' },
             { num: 'Strategy 03', title: '縮短 S、O，收掉空白', body: '把 S（Subjective）、O（Objective）兩個輸入框縮短，左欄跟右邊的 A（Assessment）差不多高，原本 A 下面那片空白就不見了，處方區也跟著往上移，減少不必要的頁面捲動。' },
-            { num: 'Strategy 04', title: '表單一致性修正', body: '統一 Plan 處方區塊的欄位寬度比例、按鈕尺寸與位置規則，將刪除按鈕移至列首（減少誤觸），新增慢性處方箋快捷按鈕。' },
+            { num: 'Strategy 04', title: '表單一致性修正', body: '統一 Plan 處方區塊的欄位寬度比例、按鈕尺寸與位置規則，將刪除按鈕移至列首（減少誤觸），把慢性處方箋按鈕移到相關的功能區。' },
           ].map(s => (
             <div className="col-md-6" key={s.num}>
               <div style={insightCardStyle.strategy}>

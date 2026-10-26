@@ -1,7 +1,7 @@
 import ProjectLayout, { GalleryImg, ProjectImageBlock, HighlightCard } from '../../components/ProjectLayout'
 
 const meta = [
-  { label: '角色', value: 'UI/UX Designer' },
+  { label: '角色', value: 'UI/UX 設計師' },
   { label: '類型', value: 'APP' },
   { label: '對象', value: '一般民眾' },
   { label: '領域', value: '醫療健康' },
@@ -69,7 +69,7 @@ export default function NhiCard() {
 
       <div className="project-section">
         <h2 className="project-section-title">這個專案的判準</h2>
-        <p>使用者身體不舒服、心理壓力高，注意力和耐心都有限。這種情境下衡量設計好壞的標準只有一個：打開 APP 到出示 QR Code 要幾步。</p>
+        <p>使用者身體不舒服、心理壓力高，注意力和耐心都有限。這種情境下衡量設計好壞的標準只有一個：打開 APP 到出示或掃描 QR Code 要幾步。</p>
         <p>所以視覺上我刻意做得安靜：柔和的藍色系、紅色只用在必要的提醒、用插畫不用照片。介面在這裡不需要被看見，需要的是不擋路。</p>
       </div>
     </ProjectLayout>

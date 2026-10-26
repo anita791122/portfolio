@@ -1,7 +1,7 @@
 import ProjectLayout, { GalleryImg, ProjectImageBlock, HighlightCard } from '../../components/ProjectLayout'
 
 const meta = [
-  { label: '角色', value: 'UI/UX Designer' },
+  { label: '角色', value: 'UI/UX 設計師' },
   { label: '類型', value: 'APP' },
   { label: '領域', value: '金融科技' },
   { label: '工具', value: 'Figma' },
@@ -42,8 +42,8 @@ export default function LinepayBill() {
         <h2 className="project-section-title">設計策略</h2>
                 <div className="row g-3">
           <div className="col-md-6">
-            <HighlightCard title="使用情境分析與流程優化">
-              <p>比較電費、停車費、健保費等場景的使用頻率與操作路徑，先處理最常被用到的那幾條。</p>
+            <HighlightCard title="先看別家怎麼做">
+              <p>比較各種繳費場景的操作路徑，也研究市面上其他繳費 APP 的做法。</p>
             </HighlightCard>
           </div>
           <div className="col-md-6">

@@ -1,7 +1,7 @@
 import ProjectLayout, { GalleryImg, ProjectImageBlock, HighlightCard } from '../../components/ProjectLayout'
 
 const meta = [
-  { label: '角色', value: 'UI/UX Designer' },
+  { label: '角色', value: 'UI/UX 設計師' },
   { label: '類型', value: 'APP' },
   { label: '領域', value: '金融科技 / 市民服務' },
   { label: '工具', value: 'Figma' },

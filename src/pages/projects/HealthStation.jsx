@@ -2,7 +2,7 @@ import ProjectLayout, { GalleryImg, HighlightCard } from '../../components/Proje
 
 const meta = [
   { label: '角色', value: 'UI/UX 設計師' },
-  { label: '交付物', value: 'APP + Web UI + 設計系統', colClass: 'col-6 col-md-3' },
+  { label: '交付物', value: 'APP + Web UI + 部分設計規範', colClass: 'col-6 col-md-3' },
   { label: '領域', value: '醫療科技 / 社區健康' },
   { label: '企業', value: '先進醫資' },
 ]
@@ -27,7 +27,7 @@ export default function HealthStation() {
     >
       <div className="project-section">
         <h2 className="project-section-title">背景</h2>
-        <p>智慧健康照護站讓民眾在社區的量測機台量完，再用網頁或 APP 查看紀錄；志工也能用網頁追蹤個案。</p>
+        <p>智慧健康照護站讓民眾在社區的量測機台量完，再用網頁或 APP 查看紀錄；志工也能用網頁追蹤個案。機台、網頁和 APP 的介面都是我設計的。</p>
       </div>
 
       <div className="project-section">
@@ -96,9 +96,8 @@ export default function HealthStation() {
           <li><strong>數據連續性問題：</strong>使用者若只在覺得不舒服時才量測，歷史趨勢圖就失去預警價值。產品需要定期量測的推播提醒，量的次數夠多，趨勢圖才看得出變化。</li>
           <li><strong>藍牙配對太難：</strong>中高齡使用者很容易卡在配對。可以在配對失敗的畫面直接放影片教學，不要只給文字說明。</li>
           <li><strong>篩檢量表的醫療邊界：</strong>AD-8 是篩查工具，不是診斷工具。結果呈現的措辭要很小心：寫「建議諮詢醫師」，不能寫「您可能有失智症」。</li>
-          <li><strong>政府案的驗收：</strong>常常只看功能有沒有做到，不看好不好用。所以易用性標準要在專案一開始就寫進驗收條件，不然設計品質容易在後期被犧牲。</li>
         </ul>
-        <p className="mt-3">這個專案讓我第一次完整經歷「從零建立設計系統」的過程。Style Guide 不只是顏色表，更是跨平台設計決策的成文化。<strong>一個好的設計系統讓整個團隊能快速決策、降低溝通成本，這是設計師能為產品組織貢獻的長期基礎建設價值。</strong></p>
+        <p className="mt-3">這個專案裡，我訂了色系和部分元件的規範。</p>
       </div>
     </ProjectLayout>
   )

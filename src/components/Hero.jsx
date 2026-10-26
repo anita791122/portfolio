@@ -68,7 +68,7 @@ export default function Hero() {
             </h2>
             <p className="hero-subtitle mb-4 hero-animate" style={{ maxWidth: '680px' }}>
               產品設計師，10 年以上跨產業設計經驗。<br />
-              專長橫跨金融科技（LINE Pay、一卡通）、醫療科技（eHIS、虛擬健保卡）與政府公共服務。<br />在商業與技術限制下重新整理資訊層級和操作流程，和 PM、工程師一起把需求轉成做得出來的設計。<br />
+              專長橫跨金融科技（LINE Pay、一卡通）、醫療科技（eHIS、虛擬健保卡）、政府公共服務與電商（倫敦印象）。<br />在商業與技術限制下重新整理資訊層級和操作流程，和 PM、工程師一起把需求轉成做得出來的設計。<br />
               近期把 AI 放進日常設計流程，用 ChatGPT、Claude Code 處理 UX Writing 與原型實作，也替同事規劃過 AI 內容產出工具，並訂定它的護欄規則。
             </p>
             <div className="hero-stats mb-4 hero-animate">

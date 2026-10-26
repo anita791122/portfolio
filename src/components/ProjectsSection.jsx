@@ -9,7 +9,7 @@ const featuredProjects = [
     image: '/img/londonimg-guide-overview.jpg',
     alt: '倫敦印象商品頁模組化系統與 AI 內容工具',
     tags: ['內部工具', '設計系統', 'AI 工作流'],
-    title: '設計一套不懂語法的同事也能用的商品頁系統',
+    title: '目標：讓不懂語法的同事也能自己做商品頁',
     desc: '一個人要顧全站的商品頁，卡住的是產能。把商品頁拆成可重複使用的積木，配線上手冊與同事可自行安裝的 AI 內容工具（HTML 與工具由 AI 實作），並訂定工具裡的護欄規則，降低 AI 產出不實宣稱的風險。',
     meta: [
       { label: '角色', value: '產品設計師（UI/UX）' },
@@ -115,9 +115,9 @@ const moreProjects = [
     href: '/projects/japanese',
     image: '/img/japanese-home.jpg',
     alt: '日文道場首頁：連勝天數、XP 與愛心等留存機制',
-    tags: ['Side Project', 'PM × 前端'],
+    tags: ['Side Project', 'PM × AI 開發'],
     title: '日文道場',
-    desc: '替自己學日文做的工具，加入連勝、XP 這類遊戲化機制，一人完成設計、開發與上線',
+    desc: '替自己學日文做的工具，加入連勝、XP 這類遊戲化機制；想法和架構是我，程式由 AI 完成',
   },
   {
     href: '/projects/visual-design',

@@ -9,7 +9,7 @@ const meta = [
 
 const otherProjects = [
   { href: '/projects/ehis-redesign', title: 'eHIS 看診介面改版', desc: 'Web System｜UI/UX｜醫療資訊' },
-  { href: '/projects/japanese', title: '日文道場', desc: 'Side Project｜PM × 前端' },
+  { href: '/projects/japanese', title: '日文道場', desc: 'Side Project｜PM × AI 開發' },
   { href: '/projects/vaccine', title: '新竹市疫苗預約系統', desc: 'Web｜UI/UX + 前端切版｜公共服務' },
 ]
 
@@ -37,7 +37,7 @@ function Tradeoff({ n, title, children }) {
 export default function LondonimgSystem() {
   return (
     <ProjectLayout
-      title="設計一套不懂語法的同事也能用的商品頁系統"
+      title="目標：讓不懂語法的同事也能自己做商品頁"
       description="一個人要顧全站的商品頁，卡住的是產能。我把商品頁拆成可重複使用的積木，配上線上手冊和一套同事可自行安裝的 AI 內容工具（HTML 與工具由 AI 實作），目標是讓沒有設計背景的人也能產出符合規格的頁面。工具裡的護欄規則由我訂定，降低 AI 產出不實宣稱的風險。"
       glowStyle={{ background: 'radial-gradient(circle,rgba(180,160,212,0.35) 0%,transparent 70%)' }}
       meta={meta}
@@ -71,7 +71,7 @@ export default function LondonimgSystem() {
             </div>
           </div>
         </div>
-        <p className="mt-4">也就是說，這一頁對搜尋引擎與 AI 來說幾乎不存在。同時 GA4 顯示：加購行為多數發生在商品頁，但客人平均只看到頁面上方一小段，加購最多的商品也很少人滑到底。</p>
+        <p className="mt-4">也就是說，這一頁對搜尋引擎與 AI 來說幾乎不存在。同時 Clarity 熱圖顯示：加價購多數發生在商品頁，但客人平均只看到頁面上方一小段，加價購最多的商品也很少人滑到底。</p>
         <p>兩件事合起來的結論是：把心力放在「頁面下半部做得更精緻」是錯的方向。問題其實有兩個：內容產不出來，產出來也讀不到。</p>
       </div>
 
@@ -133,7 +133,7 @@ export default function LondonimgSystem() {
         </Tradeoff>
 
         <Tradeoff n="04" title="最值錢的那句話不放在商品描述">
-          <p style={cardBody}>GA4 顯示加購發生在商品頁，但客人平均沒往下滑多少。所以組合商品「為什麼是這三件」這句最重要的話，我放在購買區上方的商品摘要欄，不放在要往下捲才看得到的商品描述欄。</p>
+          <p style={cardBody}>Clarity 熱圖顯示加價購發生在商品頁，但客人平均沒往下滑多少。所以組合商品「為什麼是這三件」這句最重要的話，我放在購買區上方的商品摘要欄，不放在要往下捲才看得到的商品描述欄。</p>
         </Tradeoff>
 
         <Tradeoff n="05" title="護欄寫進工具裡">

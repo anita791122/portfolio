@@ -12,7 +12,7 @@ const services = [
     ),
     title: 'UI / UX Design',
     subtitle: '介面與操作流程設計',
-    items: ['使用者研究與需求整理', '使用流程規劃（User Flow / IA）', 'Wireframe 與高保真 UI 設計', '元件化設計系統規劃與維護（Component-based design）'],
+    items: ['需求整理與可用性測試', '使用流程規劃（User Flow / IA）', 'Wireframe 與高保真 UI 設計', '元件化設計系統規劃與維護（Component-based design）'],
   },
   {
     num: '02',

@@ -8,7 +8,7 @@ const approachSteps = [
         <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
       </svg>
     ),
-    number: '01', name: 'Research', desc: '使用者研究與需求整理',
+    number: '01', name: 'Research', desc: '需求整理與可用性測試',
   },
   {
     icon: (

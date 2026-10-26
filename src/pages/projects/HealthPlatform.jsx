@@ -2,7 +2,7 @@ import ProjectLayout, { GalleryImg, ProjectImageBlock, HighlightCard } from '../
 import { ip } from '../../utils/imgPath'
 
 const meta = [
-  { label: '角色', value: 'UI/UX Designer' },
+  { label: '角色', value: 'UI/UX 設計師' },
   { label: '類型', value: 'Web Redesign' },
   { label: '對象', value: '醫事機構' },
   { label: '領域', value: '醫療 / 公共服務' },
