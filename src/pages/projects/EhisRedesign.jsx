@@ -35,7 +35,7 @@ export default function EhisRedesign() {
   return (
     <ProjectLayout
       title="eHIS 醫療系統看診介面改版"
-      description="重整醫師的看診介面：精簡患者資訊、把按鈕分出主次、壓縮版面、統一處方表單，讓醫師在單一視窗就能掌握看診所需的全部資訊，不必捲動頁面。"
+      description="重整醫師的看診介面：精簡患者資訊、把按鈕分出主次、壓縮版面、統一處方表單，減少不必要的頁面捲動，讓醫師更容易在單一視窗掌握看診所需資訊。"
       glowStyle={{ background: 'radial-gradient(circle,rgba(99,179,237,0.35) 0%,transparent 70%)' }}
       meta={meta}
       otherProjects={otherProjects}
@@ -53,7 +53,7 @@ export default function EhisRedesign() {
             <div style={insightCardStyle.problem}>
               <div style={{ fontFamily: 'var(--font-display)', fontSize: '1rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#f87171', marginBottom: '0.5rem' }}>Problem 01</div>
               <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '1.25rem', fontWeight: 700, marginBottom: '0.5rem' }}>資訊過載，無視覺層級</h4>
-              <p style={{ fontSize: 'var(--fs-small)', color: 'var(--text-secondary)', lineHeight: 1.7, margin: 0 }}>患者基本資料顯示欄位過多，七個功能按鈕文字冗長且重要性未分級，醫師一眼看不出哪些資訊重要、該按哪個按鈕。</p>
+              <p style={{ fontSize: 'var(--fs-small)', color: 'var(--text-secondary)', lineHeight: 1.7, margin: 0 }}>患者基本資料顯示欄位過多，六個功能按鈕文字冗長且重要性未分級，醫師一眼看不出哪些資訊重要、該按哪個按鈕。</p>
             </div>
           </div>
           <div className="col-md-4">
@@ -87,8 +87,8 @@ export default function EhisRedesign() {
         <div className="row g-3 mt-1">
           {[
             { num: 'Strategy 01', title: '精簡患者資訊', body: '從「全部顯示」改為「看診確認所需」。保留姓名、身分證號、性別，以及身高、BMI、血壓、體重、體溫、脈搏等生理數值，移除在看診當下非必要的完整地址、電話等資訊，減少視覺雜訊。' },
-            { num: 'Strategy 02', title: '按鈕重要性分級', body: '將七個同等視覺權重的按鈕，依使用頻率與重要性重新分級：常用的功能用主要按鈕，其他功能降成次要按鈕。' },
-            { num: 'Strategy 03', title: '版面重構，實現零捲動', body: '將 S（Subjective）、O（Objective）縱向排列改為左右並排，A（Assessment）維持右側欄，讓整個看診必要資訊在同一視窗可見，無需捲動頁面。' },
+            { num: 'Strategy 02', title: '按鈕重要性分級', body: '將六個同等視覺權重的按鈕，依使用頻率與重要性重新分級：常用的功能用主要按鈕，其他功能降成次要按鈕。' },
+            { num: 'Strategy 03', title: '縮短 S、O，收掉空白', body: '把 S（Subjective）、O（Objective）兩個輸入框縮短，左欄跟右邊的 A（Assessment）差不多高，原本 A 下面那片空白就不見了，處方區也跟著往上移，減少不必要的頁面捲動。' },
             { num: 'Strategy 04', title: '表單一致性修正', body: '統一 Plan 處方區塊的欄位寬度比例、按鈕尺寸與位置規則，將刪除按鈕移至列首（減少誤觸），新增慢性處方箋快捷按鈕。' },
           ].map(s => (
             <div className="col-md-6" key={s.num}>
@@ -108,7 +108,7 @@ export default function EhisRedesign() {
 
       <div style={{ margin: '2.5rem 0' }}>
         <div style={baLabel('after')}>✓ &nbsp;After：改版後介面</div>
-        <p style={{ fontSize: 'var(--fs-small)', color: 'var(--text-secondary)', lineHeight: 1.7, marginBottom: '1rem' }}>僅保留醫生看診所需資訊，讓視窗維持不需捲動即可觀看到所有資訊。</p>
+        <p style={{ fontSize: 'var(--fs-small)', color: 'var(--text-secondary)', lineHeight: 1.7, marginBottom: '1rem' }}>僅保留醫生看診所需資訊，減少不必要的頁面捲動。</p>
         <div style={{ borderRadius: '16px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.06)', background: 'var(--bg-elevated)' }}>
           <GalleryImg src="/img/web-SOAP2.jpg" alt="eHIS 看診介面 After" />
         </div>

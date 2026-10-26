@@ -69,7 +69,7 @@ const moreProjects = [
     alt: '改版後的 eHIS 看診介面：看診資訊集中在同一個視窗',
     tags: ['Web System', '醫療資訊'],
     title: 'eHIS 看診介面改版',
-    desc: '重構看診介面，實現零捲動工作流',
+    desc: '重整看診介面，減少不必要的頁面捲動',
   },
   {
     href: '/projects/health-platform',
