@@ -33,7 +33,7 @@ const approachSteps = [
         <polyline points="20 6 9 17 4 12" />
       </svg>
     ),
-    number: '04', name: 'Deliver', desc: '設計交付與迭代優化',
+    number: '04', name: 'Deliver', desc: '設計交付與上線後調整',
   },
 ]
 
@@ -48,20 +48,20 @@ export default function AboutSection() {
 
         <div className="row g-5 align-items-start mb-5">
           <div className="col-lg-5 fade-up">
-            <p className="about-tagline">不只做設計，<br />更思考設計的為什麼。</p>
+            <p className="about-tagline">先弄清楚問題，<br />再開始設計。</p>
           </div>
           <div className="col-lg-7 fade-up">
             <p className="about-greeting">我是 Anita，</p>
-            <p className="about-body">一位相信設計應該為產品目標服務的產品設計師。<br />過去 10 年以上，我在金融支付（一卡通）、醫療科技（先進醫資）與政府公共服務（資拓宏宇）等領域累積設計實務經驗。</p>
+            <p className="about-body">過去 10 年以上，我做過金融支付（一卡通）、醫療科技（先進醫資）與政府公共服務（資拓宏宇）的產品。</p>
             <p className="about-body">
-              我習慣在限制中找到最佳解。<br />既有平台的設計框架、跨部門的利益協調、技術可行性的取捨，這些限制通常不會消失，能決定的是在裡面選哪一條路。我的判準是：這個設計最後做不做得出來、有沒有人真的在用。
+              既有平台的設計框架、跨部門的利益協調、技術可行性的取捨，這些限制通常不會消失，能決定的是在裡面選哪一條路。我的判準是：這個設計最後做不做得出來、有沒有人真的在用。
             </p>
-            <p className="about-body">同時，我也能用 HTML/CSS/Bootstrap 切版，自己把設計從 Figma 做到瀏覽器上，這讓我在與工程師溝通時更能理解技術限制，降低來回成本。</p>
+            <p className="about-body">同時，我也能用 HTML/CSS/Bootstrap 切版，自己把設計從 Figma 做到瀏覽器上，所以和工程師討論時，我比較知道哪裡做得到、哪裡會卡。</p>
           </div>
         </div>
 
         <div className="fade-up">
-          <p className="about-how-label">— How I Work</p>
+          <p className="about-how-label">How I Work</p>
           <div className="row g-3">
             {approachSteps.map(step => (
               <div key={step.number} className="col-6 col-md-3">

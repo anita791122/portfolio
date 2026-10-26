@@ -11,8 +11,8 @@ const services = [
       </svg>
     ),
     title: 'UI / UX Design',
-    subtitle: '以使用者為核心的介面與體驗設計',
-    items: ['使用者研究與需求整理', '使用流程規劃（User Flow / IA）', 'Wireframe 與高保真 UI 設計', '元件化設計系統建置與維護（Component-based design）'],
+    subtitle: '介面與操作流程設計',
+    items: ['使用者研究與需求整理', '使用流程規劃（User Flow / IA）', 'Wireframe 與高保真 UI 設計', '元件化設計系統規劃與維護（Component-based design）'],
   },
   {
     num: '02',
@@ -22,9 +22,9 @@ const services = [
         <polyline points="8 6 2 12 8 18" />
       </svg>
     ),
-    title: 'Front-End Implementation',
-    subtitle: '將設計轉化為可落地的前端畫面',
-    items: ['HTML / CSS 切版（RWD、版面結構、樣式管理）', '設計還原與視覺細節調整', '與設計系統對齊的樣式實作', '基本互動與版面行為（hover、狀態、排版節奏）'],
+    title: 'HTML / CSS 切版',
+    subtitle: '把設計稿切成瀏覽器上的畫面',
+    items: ['RWD、版面結構與樣式管理', '設計還原與視覺細節調整', '與設計系統對齊的樣式實作', '基本互動與版面行為（hover、狀態、排版節奏）'],
   },
   {
     num: '03',
@@ -37,8 +37,8 @@ const services = [
       </svg>
     ),
     title: 'Design × Front-End Collaboration',
-    subtitle: '設計與實作之間的溝通橋樑',
-    items: ['設計可行性評估（避免過度設計）', '與工程師協作，降低溝通成本', '將設計規格轉為清楚的實作說明', '確保最終成品與設計初衷一致'],
+    subtitle: '跟工程師一起把設計做出來',
+    items: ['設計可行性評估（避免過度設計）', '設計定稿前，先跟工程師確認做法', '將設計規格轉為清楚的實作說明', '上線前核對成品和設計稿'],
   },
   {
     num: '04',
@@ -49,7 +49,7 @@ const services = [
     ),
     title: 'Tools & Skills',
     subtitle: '常用設計與開發工具',
-    items: ['Figma（UI / Prototype / Design System）', 'HTML / CSS / Bootstrap', 'Illustrator（平面宣傳品設計）', 'Photoshop / VS Code / ChatGPT'],
+    items: ['Figma（UI / Prototype / Design System）', 'HTML / CSS / Bootstrap', 'Illustrator（平面宣傳品設計）', 'Photoshop / VS Code / ChatGPT / Claude Code'],
   },
 ]
 

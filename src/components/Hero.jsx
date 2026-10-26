@@ -63,13 +63,12 @@ export default function Hero() {
           <div className="col-lg-7">
             <p className="hero-tag mb-3 hero-animate">Product Designer｜UI/UX</p>
             <h2 className="hero-title mb-4 hero-animate">
-              以使用者為核心<br />
-              <span className="accent">以商業目標為導向</span><br />
-              打造有意義的產品體驗
+              在別人訂好的規則裡，<br />
+              <span className="accent">找出還能動的那幾格</span>
             </h2>
             <p className="hero-subtitle mb-4 hero-animate" style={{ maxWidth: '680px' }}>
               產品設計師，10 年以上跨產業設計經驗。<br />
-              專長橫跨金融科技（LINE Pay、一卡通）、醫療科技（eHIS、虛擬健保卡）與政府公共服務。<br />在商業與技術限制下推動體驗優化，與 PM、工程師協作把需求轉成做得出來的設計。<br />
+              專長橫跨金融科技（LINE Pay、一卡通）、醫療科技（eHIS、虛擬健保卡）與政府公共服務。<br />在商業與技術限制下重新整理資訊層級和操作流程，和 PM、工程師一起把需求轉成做得出來的設計。<br />
               近期把 AI 放進日常設計流程，用 ChatGPT、Claude Code 處理 UX Writing 與原型實作，也替同事規劃過 AI 內容產出工具，並訂定它的護欄規則。
             </p>
             <div className="hero-stats mb-4 hero-animate">
@@ -94,7 +93,7 @@ export default function Hero() {
           </div>
           <div className="col-lg-5 d-none d-lg-flex justify-content-center hero-animate">
             <div className="hero-photo-wrapper" data-parallax-speed="-0.08">
-              <img src={ip('/img/img_photo.avif')} alt="Anita — Product Designer" className="hero-photo" loading="eager" />
+              <img src={ip('/img/img_photo.avif')} alt="Anita，產品設計師" className="hero-photo" loading="eager" />
             </div>
           </div>
         </div>

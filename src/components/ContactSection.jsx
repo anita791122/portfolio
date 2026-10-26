@@ -11,7 +11,7 @@ export default function ContactSection() {
       <div className="container position-relative" style={{ zIndex: 2 }}>
         <div className="fade-up" style={{ maxWidth: '560px', margin: '0 auto' }}>
           <h2 className="contact-title mb-3">Let's <span className="accent">Connect</span></h2>
-          <p className="contact-desc mb-4">歡迎隨時與我聯繫，無論是合作想法或單純交流都很樂意。</p>
+          <p className="contact-desc mb-4">想聊聊的話，寫信或在 LinkedIn 找我都可以。</p>
           <div className="d-flex flex-column align-items-center gap-3">
             <a href="mailto:anita791122@gmail.com" className="btn-primary-custom">Send an Email</a>
             <a href="https://www.linkedin.com/in/anita-yun-99b830115/" target="_blank" rel="noopener" className="btn-secondary-custom">
