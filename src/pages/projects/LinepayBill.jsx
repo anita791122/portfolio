@@ -8,9 +8,9 @@ const meta = [
 ]
 
 const otherProjects = [
-  { href: '/projects/nhi-card', title: '虛擬健保卡就醫應用 APP', desc: 'APP — UI/UX — 醫療' },
-  { href: '/projects/linepay-citizen', title: 'LINE Pay 市民卡', desc: 'APP — UI/UX — 金融科技' },
-  { href: '/projects/vaccine', title: '新竹市疫苗預約系統', desc: 'Web — UI/UX — 公共服務' },
+  { href: '/projects/nhi-card', title: '虛擬健保卡就醫應用 APP', desc: 'APP｜UI/UX｜醫療' },
+  { href: '/projects/linepay-citizen', title: 'LINE Pay 市民卡', desc: 'APP｜UI/UX｜金融科技' },
+  { href: '/projects/vaccine', title: '新竹市疫苗預約系統', desc: 'Web｜UI/UX + 前端切版｜公共服務' },
 ]
 
 export default function LinepayBill() {
@@ -24,24 +24,23 @@ export default function LinepayBill() {
     >
       <div className="project-section">
         <h2 className="project-section-title">背景與挑戰</h2>
-        <p>LINE Pay 生活繳費功能整合於 LINE App 生態系中，使用者需在多功能場景下快速找到繳費入口並完成流程。<br />然而，繳費屬於低頻但高準確性的任務，使用者容易在多功能環境中產生迷失或誤觸。</p>
+        <p>生活繳費放在 LINE 錢包裡，旁邊還有很多其他功能。<br />在這麼多功能的畫面裡，很容易找不到入口，或按錯。</p>
         <p>主要挑戰包括：</p>
         <ul>
-          <li>使用者需在複雜的 LINE 生態系中快速定位繳費功能</li>
+          <li>要在功能很多的 LINE App 裡找到繳費入口</li>
           <li>繳費流程涉及電費、停車費、健保費等多種場景，資訊架構需要清晰</li>
-          <li>在不增加學習成本的前提下優化操作體驗</li>
+          <li>改善操作，但不能讓使用者重學一套</li>
           <li>需維持 LINE 品牌一致性與視覺規範</li>
         </ul>
       </div>
 
       <ProjectImageBlock>
-        <GalleryImg src="/img/app-lp1.avif" alt="LINE Pay 生活繳費 — 入口與流程示意" />
+        <GalleryImg src="/img/app-lp1.avif" alt="LINE Pay 生活繳費：LINE 錢包裡的繳費入口，與待設計的繳費首頁" />
       </ProjectImageBlock>
 
       <div className="project-section">
         <h2 className="project-section-title">設計策略</h2>
-        <p>在既有產品限制下進行 UX 思考與 UI 優化，在設計自由度與使用體驗之間取得平衡：</p>
-        <div className="row g-3">
+                <div className="row g-3">
           <div className="col-md-6">
             <HighlightCard title="使用情境分析與流程優化">
               <p>比較電費、停車費、健保費等場景的使用頻率與操作路徑，先處理最常被用到的那幾條。</p>
@@ -58,7 +57,7 @@ export default function LinepayBill() {
             </HighlightCard>
           </div>
           <div className="col-md-6">
-            <HighlightCard title="降低認知負擔">
+            <HighlightCard title="不用記上一頁填了什麼">
               <p>重新安排每一步要顯示什麼，讓使用者不必記住上一頁填了什麼才能繼續下一步。</p>
             </HighlightCard>
           </div>
@@ -66,19 +65,19 @@ export default function LinepayBill() {
       </div>
 
       <ProjectImageBlock>
-        <GalleryImg src="/img/app-lp12.avif" alt="LINE Pay 生活繳費 — 繳費流程 UI 設計" />
+        <GalleryImg src="/img/app-lp12.avif" alt="LINE Pay 生活繳費：我的任務、專案行動與繳費首頁" />
       </ProjectImageBlock>
       <ProjectImageBlock>
-        <GalleryImg src="/img/app-lp13.avif" alt="LINE Pay 生活繳費 — 繳費流程 UI 設計" />
+        <GalleryImg src="/img/app-lp13.avif" alt="LINE Pay 生活繳費：繳費首頁的四個區塊（選城市、快捷功能、繳費項目、廣告）" />
       </ProjectImageBlock>
       <ProjectImageBlock>
-        <GalleryImg src="/img/app-lp14.avif" alt="LINE Pay 生活繳費 — 繳費流程 UI 設計" />
+        <GalleryImg src="/img/app-lp14.avif" alt="LINE Pay 生活繳費：付款再確認、選擇單據與確認繳費" />
       </ProjectImageBlock>
 
       <div className="project-section">
         <h2 className="project-section-title">這個專案的限制</h2>
         <p>能動的範圍很窄。功能長在 LINE App 裡面，元件樣式、互動模式與品牌規範都是既定的，我不能為了體驗去改動平台層級的東西。</p>
-        <p>所以真正可以施力的只有兩件事：資訊怎麼排，以及入口放哪裡。這篇講的都是在這兩件事情上做的取捨。</p>
+        <p>所以能動的主要是兩件事：資訊怎麼排，以及入口放哪裡。這篇講的大多是這兩件事上的取捨。</p>
       </div>
     </ProjectLayout>
   )
